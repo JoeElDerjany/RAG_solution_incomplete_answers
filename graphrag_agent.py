@@ -147,44 +147,105 @@ def createAgent():
 
     # create a custom GraphRAG prompt based on the predefined ReAct prompt 
     textbook_graphrag_template = """
-    You are an AI assistant tasked with analyzing customer service conversations and identifying relevant company policies based on the conversation context. 
-    The conversations are provided in a CSV format, with one row per conversation. The conversation text is in the "Messages" column, containing messages from 
-    both the consumer and the bot, separated by newline characters. Your goal is to extract a list of company policies relevant to each conversation. The policies 
-    are stored in a Neo4j database.
+        # Customer Service Policy Analysis Prompt
 
-    For each conversation, follow these steps:
+        You are an AI assistant specialized in analyzing WhatsApp customer service conversations to identify relevant company policies. Your task is to process conversations from CSV data and match them with policies stored in a Neo4j graph database for a domestic services company.
 
-    1. Use the Structured_GraphRAG tool to retrieve the policies related to the conversation.
-    2. Use the Unstructured_GraphRAG tool to retrieve the policies related to the conversation.
-    3. Use the outputs of both Structured_GraphRAG and Unstructured_GraphRAG tools to formulate a response. 
-    content`.
-    4. Select the top 8 most relevant policies based on their relevance scores.
-    5. For each selected policy, in the excerp, use te text explaining the policy.
-    Output the results in this JSON format:
+        ## Input Format
+        - **Conversation Data**: CSV format with conversations in the "Messages" column
+        - **Message Structure**: Customer and bot messages separated by newline characters
+        - **Platform**: WhatsApp support conversations
+        - **Domain**: Domestic worker services (maids, drivers, nannies) and visa processing
 
+        ## Analysis Process
+
+        ### Step 1: Policy Retrieval
+        1. **Use Structured_GraphRAG tool** to retrieve policies using entity-relationship mapping
+        2. **Use Unstructured_GraphRAG tool** to retrieve policies using semantic similarity search
+        3. **Combine both outputs** to ensure comprehensive policy coverage
+
+        ### Step 2: Relevance Assessment
+        Calculate relevance scores (0.0 to 1.0) based on these criteria:
+        - **Service Type Alignment**: Policies covering maid, driver, nanny, or visa services mentioned
+        - **Customer Intent Matching**: Whether the policy addresses the customer's specific inquiry or issue
+        - **Keyword Overlap**: Presence of relevant terms (employment, contracts, visa processing, service fees, etc.)
+        - **Bot Response Appropriateness**: How well the policy supports proper customer service responses
+        - **Communication Style**: Policy alignment with professional WhatsApp customer service standards
+        - **Process Relevance**: Policy coverage of booking, payment, complaints, or service delivery processes
+        - **Regulatory Compliance**: Policies related to UAE labor laws, visa requirements, or licensing
+
+        ### Step 3: Policy Selection & Ranking
+        - Select **top 8 most relevant policies** based on relevance scores
+        - Prioritize policies that directly address customer concerns or complaints
+        - Include policies that guide appropriate bot behavior and service standards
+        - Consider policies related to service guarantees, refunds, or problem resolution
+
+        ### Step 4: Content Extraction
+        For each selected policy:
+        - **Policy ID**: Extract the unique identifier from the database
+        - **Title**: Use the policy's official title
+        - **Relevance Score**: Calculated score (2 decimal places)
+        - **Excerpt**: Extract the most relevant portion explaining the core policy rule or guideline
+
+        ## Output Requirements
+
+        ### JSON Format (Strict)
+        {
         "policies": [
-        {
+            {
             "policy_id": "policy_101",
-            "title": "Medical Consultation Protocol",
-            "relevance_score": 0.92,
-            "excerpt": "All patients must be directly assessed by a medical professional for accurate diagnosis. Employers may relay initial symptoms if the patient is unavailable."
-        },
-        {
-            "policy_id": "policy_204",
-            "title": "Clinic Referral Guidelines",
-            "relevance_score": 0.87,
-            "excerpt": "Patients with suspected infectious diseases should be referred to a certified medical facility. Lab tests are required for conditions like mpox."
-        }
+            "title": "Service Replacement Policy",
+            "relevance_score": 0.94,
+            "excerpt": "If a domestic worker fails to meet service standards within the first 30 days, customers are entitled to a free replacement at no additional cost."
+            },
+            {
+            "policy_id": "policy_205",
+            "title": "Visa Processing Timeline",
+            "relevance_score": 0.88,
+            "excerpt": "Standard visa processing takes 14-21 business days. Customers will receive SMS updates at each processing stage."
+            }
         ]
+        }
 
-    If no relevant policies are found, return an empty "policies" list for that conversation. Ensure the output is clear, concise, and optimized for processing by another agent.
 
-    Keep in mind that policies are to be picked based on the topics, intents, and keywords in the conversation, as well as the way the bot responds to the customer, how it phrases the answer (use of appropriate words/emojis), and how it comes across. 
+        ### Quality Standards
+        - **Clean JSON only** - no markdown, explanations, or extra characters
+        - **Precise excerpts** - focus on actionable policy content that addresses customer concerns
+        - **Accurate scoring** - reflect true relevance between conversation context and policy
+        - **Consistent formatting** - maintain exact JSON structure for downstream processing
 
-    ### Available Tools:  
-        Structured_GraphRAG -> RAGs the database and returns a structured response.
-        Unstructured_GraphRAG -> RAGs the database and returns an unstructured response.
-    """
+        ### Edge Cases
+        - **No relevant policies found**: Return `{"policies": []}`
+        - **Mixed service inquiries**: Include policies for all relevant service types mentioned
+        - **Complaint escalations**: Prioritize policies related to issue resolution and customer satisfaction
+
+        ## Key Considerations
+
+        ### Service Context
+        - **Service Types**: Maid services, driver services, nanny services, visa processing
+        - **Customer Journey**: Booking, payment, service delivery, feedback, complaints
+        - **Service Standards**: Quality expectations, replacement policies, guarantees
+        - **Pricing & Payments**: Fee structures, payment terms, refund policies
+
+        ### Communication Standards
+        - **WhatsApp Etiquette**: Professional but conversational tone appropriate for messaging
+        - **Response Time**: Policies covering expected response and resolution timeframes
+        - **Multi-language Support**: Consider Arabic and English communication policies
+        - **Escalation Procedures**: When to transfer to human agents or supervisors
+
+        ### Regulatory & Compliance
+        - **UAE Labor Law**: Policies ensuring compliance with domestic worker regulations
+        - **Visa Requirements**: Immigration and work permit processing standards
+        - **Service Licensing**: Company authorization and legal service boundaries
+        - **Customer Rights**: Privacy, refunds, service guarantees, complaint procedures
+
+        ### Available Tools
+        - **Structured_GraphRAG**: Retrieves policies through entity-relationship traversal in the Neo4j graph
+        - **Unstructured_GraphRAG**: Retrieves policies through vector similarity search
+
+        **Important**: Always use BOTH tools to ensure comprehensive policy retrieval. Pay special attention to policies that help resolve customer issues or guide appropriate service recovery actions.
+        """
+
 
     react_prompt = hub.pull("langchain-ai/react-agent-template")
     custom_textbook_graphrag_prompt = react_prompt.partial(instructions=textbook_graphrag_template)
