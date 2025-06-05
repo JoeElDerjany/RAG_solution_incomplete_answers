@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     for key, value in conversations.items():
         policies = agent.invoke({"input": value})
-        policies_dict[key] = policies
+        policies_dict[key] = policies["output"]
         i += 1
         if(i == 10):
             break
