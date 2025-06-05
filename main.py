@@ -1,5 +1,6 @@
 from graphrag_agent import createAgent
 import csv
+import re
 
 
 def extract_conversations(csv_file_path):
@@ -18,11 +19,11 @@ def save_dict_to_csv(data_dict):
         writer = csv.writer(csv_file)
         
         # Write the header
-        writer.writerow(['Conversation Id', 'Policies'])
+        writer.writerow(['Conversation Id','Messages', 'Policies'])
         
         # Write each key-value pair
         for key, value in data_dict.items():
-            writer.writerow([key, value])
+            writer.writerow([key, value["input"], value["output"]])
 
 
 if __name__ == "__main__":
@@ -33,8 +34,9 @@ if __name__ == "__main__":
     i = 0
 
     for key, value in conversations.items():
-        policies = agent.invoke({"input": value})
-        policies_dict[key] = policies["output"]
+        input = re.sub(r'[+/\\!(){}[\]^"~*?:]', ' ', value)
+        policies = agent.invoke({"input": input})
+        policies_dict[key] = policies
         i += 1
         if(i == 10):
             break

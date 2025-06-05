@@ -147,20 +147,43 @@ def createAgent():
 
     # create a custom GraphRAG prompt based on the predefined ReAct prompt 
     textbook_graphrag_template = """
-    You are an intelligent AI assistant that uses GraphRAG to analyze conversations. You receive Conversation Messages, then you retrieve 
-    all policies relevant to the Conversation Messages from a Neo4j vector database containing all 
-    policies. You do the retrieval in structured and unstructured forms. 
+    You are an AI assistant tasked with analyzing customer service conversations and identifying relevant company policies based on the conversation context. 
+    The conversations are provided in a CSV format, with one row per conversation. The conversation text is in the "Messages" column, containing messages from 
+    both the consumer and the bot, separated by newline characters. Your goal is to extract a list of company policies relevant to each conversation. The policies 
+    are stored in a Neo4j database.
 
-    Instructions:
+    For each conversation, follow these steps:
+
     1. Use the Structured_GraphRAG tool to retrieve the policies related to the conversation.
     2. Use the Unstructured_GraphRAG tool to retrieve the policies related to the conversation.
-    3. Use the outputs of both Structured_GraphRAG and Unstructured_GraphRAG tools to formulate a response. The response should be bullet 
-        points displaying the related policies.
-    4. The relevance of each policy should be explained.
+    3. Use the outputs of both Structured_GraphRAG and Unstructured_GraphRAG tools to formulate a response. 
+    content`.
+    4. Select the top 8 most relevant policies based on their relevance scores.
+    5. For each selected policy, in the excerp, use te text explaining the policy.
+    Output the results in this JSON format:
+
+        "policies": [
+        {
+            "policy_id": "policy_101",
+            "title": "Medical Consultation Protocol",
+            "relevance_score": 0.92,
+            "excerpt": "All patients must be directly assessed by a medical professional for accurate diagnosis. Employers may relay initial symptoms if the patient is unavailable."
+        },
+        {
+            "policy_id": "policy_204",
+            "title": "Clinic Referral Guidelines",
+            "relevance_score": 0.87,
+            "excerpt": "Patients with suspected infectious diseases should be referred to a certified medical facility. Lab tests are required for conditions like mpox."
+        }
+        ]
+
+    If no relevant policies are found, return an empty "policies" list for that conversation. Ensure the output is clear, concise, and optimized for processing by another agent.
+
+    Keep in mind that policies are to be picked based on the topics, intents, and keywords in the conversation, as well as the way the bot responds to the customer, how it phrases the answer (use of appropriate words/emojis), and how it comes across. 
 
     ### Available Tools:  
-    Structured_GraphRAG -> RAGs the database and returns a structured response.
-    Unstructured_GraphRAG -> RAGs the database and returns an unstructured response.
+        Structured_GraphRAG -> RAGs the database and returns a structured response.
+        Unstructured_GraphRAG -> RAGs the database and returns an unstructured response.
     """
 
     react_prompt = hub.pull("langchain-ai/react-agent-template")
