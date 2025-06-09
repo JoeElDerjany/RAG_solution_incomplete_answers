@@ -53,12 +53,19 @@ def process_csv(input_csv, output_file, prompt, api_key):
             if not policies_data:
                 raise ValueError("Could not extract valid JSON from policies field.")
             api_output = call_openai_api(messages, policies_data, prompt, api_key)
+            # --- Fix: Remove markdown code block before parsing ---
+            cleaned_output = api_output.strip()
+            if cleaned_output.startswith("```json"):
+                cleaned_output = cleaned_output[len("```json"):].strip()
+            if cleaned_output.startswith("```"):
+                cleaned_output = cleaned_output[len("```"):].strip()
+            if cleaned_output.endswith("```"):
+                cleaned_output = cleaned_output[:-3].strip()
             try:
-                parsed_output = json.loads(api_output) if api_output.startswith("{") else {"error": api_output}
+                parsed_output = json.loads(cleaned_output)
             except json.JSONDecodeError as e:
                 print(f"✗ Error parsing API response for conversation {conversation_id}: {e}")
-                parsed_output = {"error": f"Error parsing API response: {e}"}
-
+                parsed_output = {"error": f"Error parsing API response: {e}", "raw": api_output}
             results.append({
                 "conversation_id": conversation_id,
                 "output": parsed_output
@@ -115,7 +122,7 @@ def generate_output_from_csv(input_csv, output_file):
         print("Error: Please set your OPENAI_API_KEY environment variable")
         exit(1)
 
-    # Replace this with your desired prompt
+    # PROMPT
     prompt = """
     You are an AI assistant tasked with analyzing conversations between a bot and users. Your goal is to evaluate whether the bot's responses in the conversation adhere to the provided company policies. If any violations are detected, you must identify the violated policies and summarize the nature of the violation.
 
