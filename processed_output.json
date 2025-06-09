@@ -1,0 +1,114 @@
+[
+    {
+        "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+        "output": {
+            "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "policy_id": "policy_71",
+                    "title": "Medical Assistance and Sick Leave Policy",
+                    "description": "When a domestic worker needs medical assistance or sick leave, instruct them to contact the Dabbour staff at the maids.cc accommodation. The staff will guide them to the medical team available at the accommodation."
+                },
+                {
+                    "policy_id": "policy_79",
+                    "title": "Redirecting to Medical Facilities",
+                    "description": "Provide links to recommended clinics based on the severity of the condition or if the customer insists after initial symptom collection attempts."
+                }
+            ],
+            "violation_summary": "The bot failed to instruct the user to contact the Dabbour staff at the maids.cc accommodation for medical assistance, as per policy 71. Additionally, the bot did not provide links to recommended clinics despite the user's insistence, violating policy 79."
+        }
+    },
+    {
+        "conversation_id": "CHf8dbf4131b954e5cbf4112d779467156",
+        "output": {
+            "error": "Error: Could not extract valid JSON from policies field."
+        }
+    },
+    {
+        "conversation_id": "CH0b7191098cef48a98de56d8be300eca9",
+        "output": {
+            "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "policy_id": "policy_301",
+                    "title": "Medical Assistance and Sick Leave Policy",
+                    "description": "When a domestic worker needs medical assistance or sick leave, they should be directed to the Dabbour staff at the maids.cc accommodation for guidance and support. If they refuse to go, a complaint should be opened with the 'CC live-out team'."
+                }
+            ],
+            "violation_summary": "The bot failed to direct the user to the Dabbour staff at the maids.cc accommodation for guidance and support regarding medical assistance, as required by the policy."
+        }
+    },
+    {
+        "conversation_id": "CHfa8d8c96c3e14fc2b1a1d6c6fa12e11d",
+        "output": {
+            "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH390185d9659d42a99ebc030bdf726109",
+        "output": {
+            "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CHfa5e5277225e4848b0e8415177961f8b",
+        "output": {
+            "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CHf19963851db3489a9ce3bbd07cd6c470",
+        "output": {
+            "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "policy_id": "policy_301",
+                    "title": "Insurance Coverage for Clinics",
+                    "description": "Customers can access a list of clinics covered by their insurance through the provided link. If the link is not working, a detailed list can be sent upon request."
+                },
+                {
+                    "policy_id": "policy_302",
+                    "title": "Clinic Referral Policy",
+                    "description": "For inquiries about specific clinics covered by insurance, customers should be directed to the list of approved clinics. If further assistance is needed, a customer service representative can provide additional support."
+                }
+            ],
+            "violation_summary": "The bot failed to provide a list of clinics covered by the user's insurance and did not offer to send a detailed list upon request, nor did it direct the user to a customer service representative for further assistance."
+        }
+    },
+    {
+        "conversation_id": "CH7419a3fa5202411fa97df1229907b90f",
+        "output": {
+            "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CHb780b170a868457eb3e693ae9f9c78a0",
+        "output": {
+            "conversation_id": "CHf8dbf4131b954e5cbf4112d779467156",
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH6d65f41ef0a5488ebb618669aa73f2ad",
+        "output": {
+            "error": "Error: Could not extract valid JSON from policies field."
+        }
+    }
+]
