@@ -7,15 +7,16 @@ def extract_conversations(csv_file_path):
     conversation_dict = {}
     with open(csv_file_path, newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
-        for row in reader:
-            conv_id = row.get("Conversation Id")
-            message = row.get("Messages")
+        for index, row in enumerate(reader):
+            conv_id = row.get("conversation_id")
+            message = row.get("messages")
             if conv_id and message:
-                conversation_dict[conv_id] = message
+                conversation_dict[index] = (conv_id, message)
     return conversation_dict
 
+
 def save_dict_to_csv(data_dict):
-    with open('output.csv', mode='w', newline='', encoding='utf-8') as csv_file:
+    with open('output_8th_June.csv', mode='w', newline='', encoding='utf-8') as csv_file:
         writer = csv.writer(csv_file)
         
         # Write the header
@@ -23,22 +24,18 @@ def save_dict_to_csv(data_dict):
         
         # Write each key-value pair
         for key, value in data_dict.items():
-            writer.writerow([key, value["input"], value["output"]])
+            writer.writerow([value[0], value[1]["input"], value[1]["output"]])
 
 
 if __name__ == "__main__":
-    csv_path = "example.csv"
+    csv_path = "8th Jun - Sheet1.csv"
     conversations = extract_conversations(csv_path)
     policies_dict = {}
     agent = createAgent()
-    i = 0
 
     for key, value in conversations.items():
-        input = re.sub(r'[+/\\!(){}[\]^"~*?:]', ' ', value)
+        input = re.sub(r'[^a-zA-Z0-9\s:]', '', value[1])
         policies = agent.invoke({"input": input})
-        policies_dict[key] = policies
-        i += 1
-        if(i == 10):
-            break
+        policies_dict[key] = (value[0], policies)
 
     save_dict_to_csv(policies_dict)
