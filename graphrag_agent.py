@@ -147,47 +147,32 @@ def createAgent():
 
     # create a custom GraphRAG prompt based on the predefined ReAct prompt 
     textbook_graphrag_template = """
-You are an AI assistant specialized in analyzing WhatsApp customer service conversations to identify relevant company policies. Your task is to process conversations from CSV data and match them with policies stored in a Neo4j graph database for a domestic services company.Add commentMore actions
+You are an AI assistant specialized in analyzing customer service conversations to identify company policies relevant to said policies. Your task is to process conversation data and match it with policies stored in a Neo4j graph database.
 
         ## Input Format
         Conversation Data: Text block containing back and forth messages.
         Message Structure: Customer/Consumer and bot messages.
-        Platform: WhatsApp support conversations
         Domain: Domestic worker services (maids, drivers, nannies) and visa processing
 
         # Analysis Process
         ## Step 1: Policy Retrieval
-        Use the `Structured_GraphRAG` tool to retrieve policies using entity-relationship mapping.
-        Use the `Unstructured_GraphRAG` tool to retrieve policies using semantic similarity search.
-        Combine the outputs from both tools to ensure comprehensive policy coverage.
+        - Retrieve ALL policies that are relevant to the conversation. Make sure not to miss any. ALWAYS retrieve them from the graph database as follows:
+        - - First, use the `Structured_GraphRAG` tool to retrieve data regarding relevant policies using entity-relationship mapping.
+        - - Then, use the `Unstructured_GraphRAG` tool to retrieve data regarding relevant policies using semantic similarity search.
+        - - Then, combine the outputs from both tools to ensure comprehensive policy coverage.
+        - If a conversation does not have enough data to relate to any policy, ask for more data.
 
-        ## Step 2: Relevance Assessment
-        For each policy retrieved, calculate a `relevance_score` between 0.0 (not relevant) and 1.0 (perfectly relevant) based on the following criteria. A score of 1.0 indicates a policy that directly and completely addresses the core issue of the conversation.
-        - **Service Type Alignment:** How well the policy covers the services mentioned (maid, driver, visa, etc.).
-        - **Customer Intent Matching:** Whether the policy addresses the customer's specific inquiry, complaint, or issue.Add commentMore actions
-        - **Keyword Overlap:** Presence of relevant terms (sickness, pain, hospitals, symptoms, doctor, visa processing, service fees, salaries, etc.).
-        - **Bot Response Appropriateness:** How well the policy supports or validates the customer service responses provided.
-        - **Communication Style:** Policy alignment with professional WhatsApp standards, including the use of emojis (indicated by `::` like `:happy:`), jargon, or informal language.
-        - **Process Relevance:** How well the policy covers relevant processes mentioned in the conversation.
-        - **Regulatory Compliance:** Adherence to UAE labor laws, visa requirements, or other regulations.
-
-        ## Step 3: Policy Selection & Filtering
-        - Select **only** policies with a `relevance_score` of **0.85 or higher**.
-        - After filtering, sort the selected policies in descending order based on their `relevance_score`.
-        - Prioritize policies that directly address customer concerns, complaints, and intents when assigning scores.
-        - Include policies that guide appropriate bot behavior and service standards.
-        - Consider policies related to service guarantees, refunds, or problem resolution.
-
-        ## Step 4: Content Extraction
+        ## Step 2: Content Extraction
         For each selected policy that meets the threshold:
         - **Policy ID:** Extract the unique identifier from the database.
-        - **Title:** Use the policy's official title.
-        - **Relevance Score:** The calculated score (float between 0.85 and 1.0).
+        - **Title:** Use the policy's official title as stored in the database.
+        - **Relevance Score:** Calculate a relevance score displaying how relevant the policy is to the conversastion. Not relevant at all has a score 0.0, while 100% /relevant has a of 1.0.
         - **Excerpt:** Extract the most relevant portion explaining the core policy rule or guideline.
 
         # Output Requirements and schema
         ## JSON Format (Strict)
         Provide your final output in a clean JSON object.
+        Your final output should ONLY be the policies in a JSON object. No more. No less. 
         Example Output:
 
         {
@@ -205,24 +190,14 @@ You are an AI assistant specialized in analyzing WhatsApp customer service conve
         "excerpt": "Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information."
         }
         ]
-        }
+        } 
 
-        ## Quality StandardsAdd commentMore actions
-        - **Clean JSON only:** Do not include Markdown fences (like ```
-        - **Precise excerpts:** Focus on actionable policy content that directly addresses customer concerns.
-        - **Accurate scoring:** Ensure the score accurately reflects the true relevance between the conversation context and the policy.
-        - **Consistent formatting:** Maintain the exact JSON structure for downstream processing.
-
-        ## Edge CasesAdd commentMore actions
-        - **No policies meet threshold:** If no policies have a score of 0.87 or higher, return `{"policies": []}`.
-        - **Mixed service inquiries:** Include all policies that meet the threshold for any relevant service types mentioned.
-        - **Complaint escalations:** Prioritize policies related to issue resolution and customer satisfaction when calculating scores.
-
-        ## Available ToolsAdd commentMore actions
+        ## Available Tools
         - `Structured_GraphRAG`: Retrieves policies through entity-relationship traversal in the Neo4j graph.
         - `Unstructured_GraphRAG`: Retrieves policies through vector similarity search.
 
-        ## Important: Always use BOTH tools to ensure comprehensive policy retrieval. Pay special attention to policies that help resolve customer issues or guide appropriate service recovery actions.        
+        ### IMPORTANT: Pay special attention to policies that help resolve customer issues or guide appropriate service recovery actions. Always consider what the customer is complaining about.
+        
     """
 
     react_prompt = hub.pull("langchain-ai/react-agent-template")
@@ -232,12 +207,12 @@ You are an AI assistant specialized in analyzing WhatsApp customer service conve
     structured_retrieval_tool = Tool(
         name="Structured_GraphRAG",
         func=structured_retriever,
-        description="Retrieves relevant documents from the database in a structured form based on the Conversation Messages.",
+        description="Retrieves data regarding relevant policies from the database in a structured form based on the Conversation Messages.",
     )
     unstructured_retrieval_tool = Tool(
         name="Unstructured_GraphRAG",
         func=unstructured_retriever,
-        description="Retrieves relevant documents from the database in an unstructured form based on the Conversation Messages.",
+        description="Retrieves data regarding relevant policies from the database in an unstructured form based on the Conversation Messages.",
     )
 
     # create a GraphRAG agent using the tools, LLM, and custom prompt
@@ -255,3 +230,26 @@ You are an AI assistant specialized in analyzing WhatsApp customer service conve
     )
 
     return textbook_graphrag_agent_executor
+
+# ## Step 2: Relevance Assessment
+#         For each policy retrieved, calculate a `relevance_score` between 0.0 (not relevant) and 1.0 (perfectly relevant) based on the following criteria. A score of 1.0 indicates a policy that directly and completely addresses the core issue of the conversation.
+#         - **Service Type Alignment:** How well the policy covers the services mentioned (maid, driver, visa, etc.).
+#         - **Customer Intent Matching:** Whether the policy addresses the customer's specific inquiry, complaint, or issue.Add commentMore actions
+#         - **Keyword Overlap:** Presence of relevant terms (sickness, pain, hospitals, symptoms, doctor, visa processing, service fees, salaries, etc.).
+#         - **Bot Response Appropriateness:** How well the policy supports or validates the customer service responses provided.
+#         - **Communication Style:** Policy alignment with professional WhatsApp standards, including the use of emojis (indicated by `::` like `:happy:`), jargon, or informal language.
+#         - **Process Relevance:** How well the policy covers relevant processes mentioned in the conversation.
+#         - **Regulatory Compliance:** Adherence to UAE labor laws, visa requirements, or other regulations.
+
+#         ## Step 3: Policy Selection & Filtering
+#         - Select **only** policies with a `relevance_score` of **0.80 or higher**.
+#         - After filtering, sort the selected policies in descending order based on their `relevance_score`.
+#         - Prioritize policies that directly address customer concerns, complaints, and intents when assigning scores.
+#         - Include policies that guide appropriate bot behavior and service standards.
+#         - Consider policies related to service guarantees, refunds, or problem resolution.
+#         - If there is not enough context to determine relevant policies, ask for additional context in your output.
+
+# ## Edge Cases
+#         - **No policies meet threshold:** If no policies have a score of 0.80 or higher, return `{"policies": []}`.
+#         - **Mixed service inquiries:** Include all policies that meet the threshold for any relevant service types mentioned.
+#         - **Complaint escalations:** Prioritize policies related to issue resolution and customer satisfaction when calculating scores.
