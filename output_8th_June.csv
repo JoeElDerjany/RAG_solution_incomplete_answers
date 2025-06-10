@@ -8,30 +8,31 @@ Bot: I am sorry to hear that the previous clinic recommendation was not suitable
 Consumer: She wants to see a dr","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_203"",
+      ""policy_id"": ""policy_210"",
       ""title"": ""Clinic Recommendation Policy"",
       ""relevance_score"": 0.92,
-      ""excerpt"": ""Customers are entitled to receive clinic recommendations within the same Emirate for convenience. If a recommended clinic is not suitable, alternative options within the customer's Emirate should be provided.""
+      ""excerpt"": ""When recommending clinics, prioritize those within the same Emirate as the customer to ensure convenience and accessibility. If a clinic in Dubai is required, provide a list of available options.""
     },
     {
-      ""policy_id"": ""policy_307"",
-      ""title"": ""Medical Facility Access Policy"",
+      ""policy_id"": ""policy_315"",
+      ""title"": ""Medical Assistance Protocol"",
       ""relevance_score"": 0.89,
-      ""excerpt"": ""Ensure that domestic workers have access to medical facilities within their residing Emirate. Recommendations should prioritize proximity and accessibility.""
+      ""excerpt"": ""Ensure that the maid's health concerns are addressed promptly by recommending nearby medical facilities. Collect information about symptoms to guide the customer to the appropriate clinic.""
     }
   ]
-}"
+}
+```"
 CH057ceffe9c1a4c3d86378d35f44eaf95,"Bot: Hello I am Doctor Mia Please have your maid reach out to us directly to discuss her symptoms This allows for the most accurate and direct symptom assessment as we need to speak directly with the patient
 Consumer: How should she reach out to you
 Bot: Your maid can reach out to us directly by sending a message to this number: https:wame971506715943","{
-""policies"": [
-{
-""policy_id"": ""policy_305"",
-""title"": ""Symptom Collection Priority"",
-""relevance_score"": 0.88,
-""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
-}
-]
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_305"",
+      ""title"": ""Symptom Collection Priority"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+    }
+  ]
 }
 ```"
 CH10f0881474ad43568a042e73ef873976,"Consumer: You were not able to assist me
@@ -48,16 +49,16 @@ Bot: Please allow me a moment to check
 Consumer: I have been waiting for over 24hrs","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_127"",
-      ""title"": ""Medical Assistance and Complaint Handling"",
+      ""policy_id"": ""policy_71"",
+      ""title"": ""Live-Out Maid Medical Report Handling"",
       ""relevance_score"": 0.92,
-      ""excerpt"": ""When the patient needs to access medical assistance or asks for a sick leave, you must instruct them to specifically talk to the Dabbour staff on her floor at the maids.cc accommodation. Clearly explain that the Dabbour staff will then guide or take them to the medical team available at the accommodation who can provide help with their health concerns.""
+      ""excerpt"": ""If a live-out maid is sick and can't share her medical report, you must immediately open a complaint to the 'CC live-out team'. Inform the maid that someone will contact her shortly to help her.""
     },
     {
-      ""policy_id"": ""policy_71"",
-      ""title"": ""Complaint Handling for Medical Reports"",
+      ""policy_id"": ""policy_69"",
+      ""title"": ""Medical Assistance and Reporting"",
       ""relevance_score"": 0.90,
-      ""excerpt"": ""If the maid tells you that she cannot or does not want to share her medical report, you must immediately open a complaint to the 'CC live-out team'. The message for this complaint must be: 'Live-out maid is sick and can’t share her medical report'. After opening the complaint, inform the maid that someone will contact her shortly to help her.""
+      ""excerpt"": ""If the maid has not visited a clinic or hospital for her current illness, suggest that she go to the maids.cc accommodation for help. The staff there can connect her with the medical team.""
     }
   ]
 }
@@ -87,23 +88,20 @@ Consumer: abudhabi doc at reem island gate tower 2
 Bot: When did you first notice your urine bubbling","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_201"",
-      ""title"": ""Waiting for Insurance Approval"",
-      ""relevance_score"": 0.95,
-      ""excerpt"": ""If the customer says that they are waiting for insurance approval or anything related to approval/rejection status, inform them clearly and politely that we only purchase the insurance on behalf of the maids, and that approvals are handled directly by NAS, the insurance company. Provide them with this number to call the insurance: 800-2311. Inform them that they will not be charged any fees for this call. Push them to reach out to NAS themselves after making sure that the clinic or hospital has submitted the necessary documents for approval.""
+      ""policy_id"": ""policy_204"",
+      ""title"": ""Insurance Coverage and Approval Process"",
+      ""relevance_score"": 0.92,
+      ""excerpt"": ""The company provides insurance coverage for maids, but all approvals for medical procedures are managed by NAS, the insurance provider. Customers should ensure that the clinic submits the necessary documents for approval.""
     },
     {
-      ""policy_id"": ""policy_202"",
-      ""title"": ""Medical Tests Pre-Approval"",
-      ""relevance_score"": 0.90,
-      ""excerpt"": ""Always inform the customer that all medical tests and procedures need to be pre-approved by the insurance. Explain that the only exception is for life-threatening emergencies, where the patient needs urgent medical attention immediately.""
+      ""policy_id"": ""policy_310"",
+      ""title"": ""Medical Assistance and Clinic Referral"",
+      ""relevance_score"": 0.89,
+      ""excerpt"": ""For severe pain or medical issues, it is recommended to visit a clinic. The company can assist in finding the nearest clinic based on the customer's location.""
     }
   ]
-}
-```"
-CH2d8eda1ac30c4b90ac6052e5dc975df6,Bot: Thank you for reaching out allow me a moment please,"{
-  ""policies"": []
-}
+}"
+CH2d8eda1ac30c4b90ac6052e5dc975df6,Bot: Thank you for reaching out allow me a moment please,"To proceed with the analysis, I need more context from the conversation to identify relevant policies. Please provide additional conversation details or messages that include specific customer inquiries or issues related to domestic worker services or visa processing.
 ```"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: Hello good morning to you too How can I help you today
 Consumer: This is Doctor Mia
@@ -121,16 +119,16 @@ Regarding your cancellation to be able to assist you with this matter you need t
 Consumer: My boss and I  yesterday discuss about the cancellation but he dont agreebut I want to go back the agency to relax a few days until I recover my pain in my waist","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_204"",
-      ""title"": ""Cancellation and Return Policy"",
-      ""relevance_score"": 0.92,
-      ""excerpt"": ""If a domestic worker wishes to return to the agency due to health issues, the employer must initiate the cancellation process. The worker is entitled to a temporary return for recovery if health conditions are verified.""
+      ""policy_id"": ""policy_80"",
+      ""title"": ""Pain Location Identification"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""For symptoms involving pain (specifically headaches, stomachaches, or leg pain), you must use the provided image links to help the maid pinpoint the exact location of her pain by asking her to identify the region number.""
     },
     {
-      ""policy_id"": ""policy_310"",
-      ""title"": ""Health and Medical Support Policy"",
-      ""relevance_score"": 0.89,
-      ""excerpt"": ""Domestic workers experiencing health issues should contact the medical team for advice. Employers are encouraged to facilitate medical consultations and provide necessary support.""
+      ""policy_id"": ""policy_79"",
+      ""title"": ""Medical Assistance and Accommodation"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""When the patient needs to access medical assistance or asks for a sick leave, you must instruct them to specifically talk to the Dabbour staff on her floor at the maids.cc accommodation. Clearly explain that the Dabbour staff will then guide or take them to the medical team available at the accommodation who can provide help with their health concerns.""
     }
   ]
 }
@@ -174,7 +172,17 @@ Here is some lifestyle advice that may help:
 You should feel better within 5 to 7 days Please let me know if your symptoms do not improve or get worse
 Consumer: Doc I have vedeo to show you please this our confidential Convo onlySo that you can understand why I feel this
 Bot: I am sorry but I cannot view videos Please describe your symptoms in text so I can understand and help you
-Consumer: Ok doc","{""policies"": []}"
+Consumer: Ok doc","{
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_305"",
+      ""title"": ""Symptom Collection Priority"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+    }
+  ]
+}
+```"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: A folding bed might not give enough support for your back It is important to sleep on a firm mattress to help with back pain
 Consumer: Yes doc
 Consumer: 2 year and 4mons I sleep here","{
@@ -186,9 +194,9 @@ Consumer: 2 year and 4mons I sleep here","{
       ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
     }
   ]
-}
+}"
+CH2d8eda1ac30c4b90ac6052e5dc975df6,Bot: Thank you for reaching out allow me a moment please,"{""policies"": []}
 ```"
-CH2d8eda1ac30c4b90ac6052e5dc975df6,Bot: Thank you for reaching out allow me a moment please,"{""policies"": []}"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: Hello good morning to you too How can I help you today
 Consumer: This is Doctor Mia
 Bot: Yes I am Doctor Mia How can I help you today
@@ -205,16 +213,16 @@ Regarding your cancellation to be able to assist you with this matter you need t
 Consumer: My boss and I  yesterday discuss about the cancellation but he dont agreebut I want to go back the agency to relax a few days until I recover my pain in my waist","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_204"",
-      ""title"": ""Cancellation and Return Policy"",
-      ""relevance_score"": 0.92,
-      ""excerpt"": ""If an employee wishes to return to the agency due to health issues, the employer must initiate the cancellation process. The agency will facilitate the return once the employer's request is received.""
+      ""policy_id"": ""policy_80"",
+      ""title"": ""Pain Symptom Identification"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""For symptoms involving pain, use the provided image links to help the maid pinpoint the exact location of her pain by asking her to identify the region number. Use the associated potential diagnoses listed with each image to inform your assessment.""
     },
     {
-      ""policy_id"": ""policy_310"",
-      ""title"": ""Health and Medical Support"",
-      ""relevance_score"": 0.90,
-      ""excerpt"": ""Employees experiencing health issues should contact the medical team for advice. The agency provides support for medical consultations and necessary interventions.""
+      ""policy_id"": ""policy_72"",
+      ""title"": ""Medical Assistance and Accommodation"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""When the patient needs to access medical assistance, instruct them to talk to the Dabbour staff at the maids.cc accommodation. The staff will guide or take them to the medical team available at the accommodation for help with their health concerns.""
     }
   ]
 }
@@ -268,29 +276,27 @@ Consumer: Ok doc","{
     },
     {
       ""policy_id"": ""policy_129"",
-      ""title"": ""OTC Medication Recommendation"",
+      ""title"": ""Decision Logic (OTC vs. Clinic)"",
       ""relevance_score"": 0.88,
-      ""excerpt"": ""Based on the gathered symptoms, severity, duration, and any reported chronic conditions/allergies, assess the likely condition. Your absolute strongest preference and default action is to recommend appropriate Over-the-Counter (OTC) medications. Provide OTC recommendations for any condition that is determined not to be a medical emergency.""
+      ""excerpt"": ""Based on the gathered symptoms, severity, duration, and any reported chronic conditions/allergies, assess the likely condition. Your absolute strongest preference and default action is to recommend appropriate Over-the-Counter (OTC) medications. Only consider recommending a clinic visit if the symptoms clearly indicate a serious condition or a potential medical emergency.""
     }
   ]
-}"
+}
+```"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: A folding bed might not give enough support for your back It is important to sleep on a firm mattress to help with back pain
 Consumer: Yes doc
 Consumer: 2 year and 4mons I sleep here","{
-""policies"": [
-{
-""policy_id"": ""policy_305"",
-""title"": ""Symptom Collection Priority"",
-""relevance_score"": 0.88,
-""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
-}
-]
-}
-```"
-CH2d8eda1ac30c4b90ac6052e5dc975df6,Bot: Thank you for reaching out allow me a moment please,"{
-  ""policies"": []
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_305"",
+      ""title"": ""Symptom Collection Priority"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+    }
+  ]
 }
 ```"
+CH2d8eda1ac30c4b90ac6052e5dc975df6,Bot: Thank you for reaching out allow me a moment please,"{""policies"": []}"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: Hello good morning to you too How can I help you today
 Consumer: This is Doctor Mia
 Bot: Yes I am Doctor Mia How can I help you today
@@ -305,7 +311,20 @@ For your back pain I recommend contacting our medical team directly at http:wame
 
 Regarding your cancellation to be able to assist you with this matter you need to discuss it with your client They need to request cancellation from their end so we can proceed with the cancellation procedure
 Consumer: My boss and I  yesterday discuss about the cancellation but he dont agreebut I want to go back the agency to relax a few days until I recover my pain in my waist","{
-  ""policies"": []
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_80"",
+      ""title"": ""Pain Symptom Identification"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""For symptoms involving pain, use the provided image links to help the maid pinpoint the exact location of her pain by asking her to identify the region number. Use the associated potential diagnoses listed with each image to inform your assessment.""
+    },
+    {
+      ""policy_id"": ""policy_72"",
+      ""title"": ""Medical Assistance and Accommodation"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""When the patient needs to access medical assistance, instruct them to talk to the Dabbour staff at the maids.cc accommodation. The staff will guide or take them to the medical team available at the accommodation.""
+    }
+  ]
 }"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: You can get a medical certificate from a clinic that will show your need for rest This can help you discuss your condition with your employer
 
@@ -346,32 +365,19 @@ Here is some lifestyle advice that may help:
 You should feel better within 5 to 7 days Please let me know if your symptoms do not improve or get worse
 Consumer: Doc I have vedeo to show you please this our confidential Convo onlySo that you can understand why I feel this
 Bot: I am sorry but I cannot view videos Please describe your symptoms in text so I can understand and help you
-Consumer: Ok doc","```json
-{
+Consumer: Ok doc","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_305"",
+      ""policy_id"": ""policy_72"",
       ""title"": ""Symptom Collection Priority"",
       ""relevance_score"": 0.90,
-      ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+      ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation, you must first attempt to collect information about the patient’s symptoms. Politely explain that understanding their symptoms is the best way to help them determine the right course of action.""
     },
     {
-      ""policy_id"": ""policy_402"",
+      ""policy_id"": ""policy_129"",
       ""title"": ""Decision Logic (OTC vs. Clinic)"",
       ""relevance_score"": 0.88,
-      ""excerpt"": ""Based on the gathered symptoms, severity, duration, and any reported chronic conditions/allergies, assess the likely condition. Recommend appropriate Over-the-Counter (OTC) medications unless a clinic visit is clearly necessary.""
-    },
-    {
-      ""policy_id"": ""policy_410"",
-      ""title"": ""Affordability & Accessibility"",
-      ""relevance_score"": 0.86,
-      ""excerpt"": ""When discussing OTC medications, remember the need for affordable and easily accessible options in the UAE. Common OTC medicines are generally affordable and available without needing a clinic prescription.""
-    },
-    {
-      ""policy_id"": ""policy_415"",
-      ""title"": ""Safety First (Allergies/Conditions)"",
-      ""relevance_score"": 0.85,
-      ""excerpt"": ""Always ask about any known chronic conditions or allergies the patient has. Consider this information when assessing symptoms and recommending medication.""
+      ""excerpt"": ""Based on the gathered symptoms, severity, duration, and any reported chronic conditions/allergies, assess the likely condition. Your absolute strongest preference and default action is to recommend appropriate Over-the-Counter (OTC) medications. Only consider recommending a clinic visit if the symptoms clearly indicate a serious condition or a potential medical emergency.""
     }
   ]
 }
@@ -379,17 +385,35 @@ Consumer: Ok doc","```json
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: A folding bed might not give enough support for your back It is important to sleep on a firm mattress to help with back pain
 Consumer: Yes doc
 Consumer: 2 year and 4mons I sleep here","{
-""policies"": [
-{
-""policy_id"": ""policy_305"",
-""title"": ""Symptom Collection Priority"",
-""relevance_score"": 0.88,
-""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
-}
-]
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_101"",
+      ""title"": ""Symptom Collection Priority"",
+      ""relevance_score"": 0.97,
+      ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Politely explain that understanding their symptoms is the best way to help them determine the right course of action.""
+    },
+    {
+      ""policy_id"": ""policy_102"",
+      ""title"": ""Symptom Assessment Process"",
+      ""relevance_score"": 0.97,
+      ""excerpt"": ""When collecting symptoms, systematically use the OLDCARTS method (Onset, Location, Duration, Character, Aggravating/Relieving factors, Radiation, Timing/Triggers, Severity).""
+    },
+    {
+      ""policy_id"": ""policy_103"",
+      ""title"": ""Handling Clinic/Link Requests"",
+      ""relevance_score"": 0.97,
+      ""excerpt"": ""If the customer asks for clinic information before you have had a chance to fully assess the patient’s symptoms, politely acknowledge their question but explain that you need to understand the symptoms first.""
+    },
+    {
+      ""policy_id"": ""policy_104"",
+      ""title"": ""Decision Logic (OTC vs. Clinic)"",
+      ""relevance_score"": 0.97,
+      ""excerpt"": ""Based on the gathered symptoms, assess the likely condition. Recommend appropriate Over-the-Counter (OTC) medications unless a serious condition is indicated.""
+    }
+  ]
 }
 ```"
-CH2d8eda1ac30c4b90ac6052e5dc975df6,Bot: Thank you for reaching out allow me a moment please,"To proceed with the analysis, I need more context from the conversation. The current input is a single message from the bot, which doesn't provide enough information to identify relevant policies. Please provide additional conversation data, including messages from both the customer and the bot, to enable a comprehensive policy analysis.
+CH2d8eda1ac30c4b90ac6052e5dc975df6,Bot: Thank you for reaching out allow me a moment please,"To proceed with the analysis, I need more context from the conversation to identify relevant policies. Please provide additional conversation data or specify the customer's inquiry or issue.
 ```"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: Hello good morning to you too How can I help you today
 Consumer: This is Doctor Mia
@@ -408,18 +432,19 @@ Consumer: My boss and I  yesterday discuss about the cancellation but he dont ag
   ""policies"": [
     {
       ""policy_id"": ""policy_80"",
-      ""title"": ""Symptom Location Identification"",
+      ""title"": ""Pain Symptom Identification"",
       ""relevance_score"": 0.90,
-      ""excerpt"": ""For symptoms involving pain, you must use the provided image links to help the maid pinpoint the exact location of her pain by asking her to identify the region number.""
+      ""excerpt"": ""For symptoms involving pain, use the provided image links to help the maid pinpoint the exact location of her pain by asking her to identify the region number. Use the associated potential diagnoses listed with each image to inform your assessment.""
     },
     {
-      ""policy_id"": ""policy_79"",
+      ""policy_id"": ""policy_72"",
       ""title"": ""Medical Assistance and Accommodation"",
       ""relevance_score"": 0.88,
-      ""excerpt"": ""When the patient needs to access medical assistance, instruct them to talk to the Dabbour staff at the maids.cc accommodation. The staff will guide them to the medical team available at the accommodation.""
+      ""excerpt"": ""When the patient needs to access medical assistance, instruct them to talk to the Dabbour staff at the maids.cc accommodation. The staff will guide or take them to the medical team available at the accommodation for help with their health concerns.""
     }
   ]
-}"
+}
+```"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: You can get a medical certificate from a clinic that will show your need for rest This can help you discuss your condition with your employer
 
 Can you please tell me more about your back pain
@@ -466,26 +491,21 @@ Consumer: Ok doc","{
       ""title"": ""Symptom Collection Priority"",
       ""relevance_score"": 0.88,
       ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
-    },
-    {
-      ""policy_id"": ""policy_401"",
-      ""title"": ""OTC Medication Recommendation"",
-      ""relevance_score"": 0.87,
-      ""excerpt"": ""Based on the gathered symptoms, severity, duration, and any reported chronic conditions/allergies, assess the likely condition. Your absolute strongest preference and default action is to recommend appropriate Over-the-Counter (OTC) medications. You must provide OTC recommendations for any condition that is determined not to be a medical emergency, not severely dangerous, and does not clearly require immediate professional medical attention based on your assessment.""
     }
   ]
-}"
+}
+```"
 CH2d8eda1ac30c4b90ac6052e5dc975df6,"Bot: A folding bed might not give enough support for your back It is important to sleep on a firm mattress to help with back pain
 Consumer: Yes doc
 Consumer: 2 year and 4mons I sleep here","{
-""policies"": [
-{
-""policy_id"": ""policy_305"",
-""title"": ""Symptom Collection Priority"",
-""relevance_score"": 0.88,
-""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
-}
-]
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_305"",
+      ""title"": ""Symptom Collection Priority"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+    }
+  ]
 }
 ```"
 CH349c0b94fe1f4b0c9030970d606907ef,"Consumer: Hi
@@ -499,26 +519,26 @@ Consumer: How to reach you Dr
 Bot: Your maid can reach me directly through this link: https:wame971506715943
 Consumer: She is trying to call you even I also tried but we are getting your cell phone switched off
 Consumer: Please call me back ASAP","{
-""policies"": [
-{
-""policy_id"": ""policy_201"",
-""title"": ""Insurance Network Details"",
-""relevance_score"": 0.90,
-""excerpt"": ""If the customer explicitly asks for the cases that are included in the insurance network, you must always send them the policy details document.""
-},
-{
-""policy_id"": ""policy_202"",
-""title"": ""Waiting for Insurance Approval"",
-""relevance_score"": 0.88,
-""excerpt"": ""Inform the customer clearly and politely that we only purchase the insurance on behalf of the maids, and that approvals are handled directly by NAS, the insurance company. Provide them with this number to call the insurance: 800-2311.""
-},
-{
-""policy_id"": ""policy_203"",
-""title"": ""Directing to Accommodation"",
-""relevance_score"": 0.87,
-""excerpt"": ""If the maid tells you that she has not visited a clinic or hospital for her current illness, you should suggest that she go to the maids.cc accommodation for help. Explain that the staff there can help her and connect her with the medical team at the accommodation.""
-}
-]
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_201"",
+      ""title"": ""Insurance Network Details"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""If the customer explicitly asks for the cases that are included in the insurance network, you must always send them the policy details document.""
+    },
+    {
+      ""policy_id"": ""policy_202"",
+      ""title"": ""Waiting for Insurance Approval"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""Inform the customer clearly and politely that we only purchase the insurance on behalf of the maids, and that approvals are handled directly by NAS, the insurance company. Provide them with this number to call the insurance: 800-2311.""
+    },
+    {
+      ""policy_id"": ""policy_203"",
+      ""title"": ""Directing to Accommodation"",
+      ""relevance_score"": 0.87,
+      ""excerpt"": ""If the maid tells you that she has not visited a clinic or hospital for her current illness, you should suggest that she go to the maids.cc accommodation for help. Explain that the staff there can help her and connect her with the medical team at the accommodation.""
+    }
+  ]
 }
 ```"
 CH4e2727fbb0174c8ead42af8beecaea92,"Consumer: Hello
@@ -537,22 +557,16 @@ Consumer: Now
 Bot: Please allow me a moment to check","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_001"",
+      ""policy_id"": ""policy_71"",
+      ""title"": ""Medical Report and Complaint Handling"",
+      ""relevance_score"": 0.92,
+      ""excerpt"": ""If the maid tells you that she cannot or does not want to share her medical report, you must immediately open a complaint to the 'CC live-out team'. The message for this complaint must be: 'Live-out maid is sick and can’t share her medical report'. After opening the complaint, inform the maid that someone will contact her shortly to help her.""
+    },
+    {
+      ""policy_id"": ""policy_72"",
       ""title"": ""Medical Emergency Handling"",
-      ""relevance_score"": 0.95,
-      ""excerpt"": ""Upon identifying any customer input that indicates a potential medical emergency, you must immediately open a complaint to the 'Medical Consultant skill' with the message: 'Maid has a medical emergency'.""
-    },
-    {
-      ""policy_id"": ""policy_002"",
-      ""title"": ""Handling Refusal to Share Report"",
-      ""relevance_score"": 0.87,
-      ""excerpt"": ""If, after you ask for a medical report, the maid tells you that she cannot or does not want to share her medical report, you must immediately open a complaint to the 'CC live-out team'.""
-    },
-    {
-      ""policy_id"": ""policy_003"",
-      ""title"": ""Redirecting to Medical Facilities & Providing Links"",
-      ""relevance_score"": 0.86,
-      ""excerpt"": ""Provide the link only when you have assessed the symptoms and determined that a clinic visit is necessary based on the severity/nature of the condition.""
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""Upon identifying any customer input that indicates a potential medical emergency, you must immediately open a complaint to the 'Medical Consultant skill' with the message: 'Maid has a medical emergency'. This includes, but is not limited to: any bleeding, difficulty breathing, choking, suspected pneumonia, fainting, seizure, trouble speaking, suspected tuberculosis, numbness, and suspected monkeypox.""
     }
   ]
 }
@@ -577,8 +591,22 @@ Consumer: nan
 Bot: Thank you for sending the clinic information To help you find the nearest clinics that are covered by your insurance please share your current location with me in the format of street apartment and city
 Bot: I am sorry to hear that you did not get well after your last visit Please tell me how your symptoms have changed and if you have any new symptoms now
 Consumer: nan
-Consumer: Is the seme symptoms please","{
-  ""policies"": []
+Consumer: Is the seme symptoms please","```json
+{
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_001"",
+      ""title"": ""Insurance Coverage Percentages"",
+      ""relevance_score"": 0.95,
+      ""excerpt"": ""The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient.""
+    },
+    {
+      ""policy_id"": ""policy_002"",
+      ""title"": ""GP Referral Policy"",
+      ""relevance_score"": 0.87,
+      ""excerpt"": ""Whenever a customer inquires about hospital visits or specialist clinics, always ask if they have a GP referral. Explain to them that they must see a General Practitioner first, who will refer them to a specialist if needed, according to the insurance policy.""
+    }
+  ]
 }
 ```"
 CH5be5f86d50e44ec99dcf291d64c2c0fd,"Consumer: Hello doc good evenint
@@ -609,24 +637,23 @@ You should start to feel better within 3 to 5 days If your symptoms do not impro
     {
       ""policy_id"": ""policy_73"",
       ""title"": ""Follow-up After OTC Failure"",
-      ""relevance_score"": 0.90,
+      ""relevance_score"": 0.92,
       ""excerpt"": ""If a maid contacts you again and reports that her symptoms have not improved or have worsened after taking the recommended OTC medication, you must not tell her to go directly to a clinic. Instead, you must initiate a new round of symptom collection to reassess her condition.""
     },
     {
       ""policy_id"": ""policy_101"",
       ""title"": ""Symptom Collection Priority"",
-      ""relevance_score"": 0.88,
+      ""relevance_score"": 0.90,
       ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation, you must first attempt to collect information about the patient’s symptoms.""
     },
     {
       ""policy_id"": ""policy_305"",
       ""title"": ""Decision Logic (OTC vs. Clinic)"",
-      ""relevance_score"": 0.87,
+      ""relevance_score"": 0.88,
       ""excerpt"": ""Based on the gathered symptoms, severity, duration, and any reported chronic conditions/allergies, assess the likely condition. Your absolute strongest preference and default action is to recommend appropriate Over-the-Counter (OTC) medications.""
     }
   ]
-}
-```"
+}"
 CH6b75eb62245548668d987a52ff0e1f71,"Consumer: Hi which clinic or hospital cover for Minakshi insurance
 Bot: Hello I am Doctor Mia To help your maid best please have her reach out to us directly to discuss her symptoms This allows for the most accurate and direct symptom assessment
 Consumer: where is your location in Abu Dhabi
@@ -637,20 +664,14 @@ Bot: To help your maid best please have her reach out to us directly to discuss 
 Bot: Thank you for reaching out allow me a moment please
 Consumer: ok
 Consumer: Any update from your side","{
-""policies"": [
-{
-""policy_id"": ""policy_305"",
-""title"": ""Symptom Collection Priority"",
-""relevance_score"": 0.90,
-""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patient’s symptoms. Politely explain that understanding their symptoms is the best way to help them determine the right course of action.""
-},
-{
-""policy_id"": ""policy_310"",
-""title"": ""Specific Eye-Related Concerns"",
-""relevance_score"": 0.88,
-""excerpt"": ""If the maid describes eye-related concerns: If the symptoms suggest a serious condition (e.g., a swollen eye, signs of infection, a clearly injured eye, severe or sudden-onset red eye), you must recommend that the patient visit an ophthalmologist or a clinic.""
-}
-]
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_305"",
+      ""title"": ""Symptom Collection Priority"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+    }
+  ]
 }"
 CH75256d7dee4343d7a55aeee6ee13a884,"Consumer: Can I ask what hospital can I have a check
 Consumer: Can I used my medical insurance
@@ -695,25 +716,20 @@ Bot: You will need to bring your insurance card number: 3332N33FLFL23LED You do 
 Consumer: Do I need a card or il just give that number","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_201"",
-      ""title"": ""Insurance Network Details"",
-      ""relevance_score"": 0.90,
-      ""excerpt"": ""If the customer explicitly asks for the cases that are included in the insurance network, you must always send them the policy details document.""
+      ""policy_id"": ""policy_79"",
+      ""title"": ""Insurance Coverage Percentages"",
+      ""relevance_score"": 0.92,
+      ""excerpt"": ""The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient.""
     },
     {
-      ""policy_id"": ""policy_202"",
-      ""title"": ""Including Insurance Card Number"",
-      ""relevance_score"": 0.88,
-      ""excerpt"": ""When you are directing a customer to a clinic, always include the insurance card number of the patient in the same message.""
-    },
-    {
-      ""policy_id"": ""policy_203"",
+      ""policy_id"": ""policy_78"",
       ""title"": ""GP Referral Policy"",
-      ""relevance_score"": 0.87,
+      ""relevance_score"": 0.90,
       ""excerpt"": ""Whenever a customer inquires about hospital visits or specialist clinics, always ask if they have a GP referral. Explain to them that they must see a General Practitioner first, who will refer them to a specialist if needed, according to the insurance policy.""
     }
   ]
-}"
+}
+```"
 CH8990a0567c1f4eb9959ebae349f121cd,"Bot: Here are the nearest covered Clinics to you:
 1 Ruby Clinic  Dubai
 Address: https:wwwgooglecommapsq2516256155415936
@@ -743,20 +759,30 @@ Telephone: 97145693389
 3 Jupiter Speciality Medical Center  Dubai
 Address: https:wwwgooglecommapsq2524486255298033
 Telephone: 97143866330","{
-""policies"": [
-{
-""policy_id"": ""policy_204"",
-""title"": ""Serious Condition - Ophthalmologist Recommendation"",
-""relevance_score"": 0.92,
-""excerpt"": ""If the symptoms suggest a serious condition (e.g., a swollen eye, signs of infection, a clearly injured eye, severe or sudden-onset red eye), you must recommend that the patient visit an ophthalmologist or a clinic.""
-}
-]
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_201"",
+      ""title"": ""Serious Condition Recommendation"",
+      ""relevance_score"": 0.92,
+      ""excerpt"": ""If the symptoms suggest a serious condition (e.g., a swollen eye, signs of infection, a clearly injured eye, severe or sudden-onset red eye), you must recommend that the patient visit an ophthalmologist or a clinic.""
+    },
+    {
+      ""policy_id"": ""policy_202"",
+      ""title"": ""Clinic Visit Necessity"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""Provide clinic information only when you have assessed the symptoms and determined that a clinic visit is necessary based on the severity/nature of the condition.""
+    }
+  ]
 }
 ```"
 CHa07d1244f761423f880ab6031886271e,"Consumer: nan
 Consumer: nan
 Bot:     
-Consumer: nan","{""policies"": []}"
+Consumer: nan","The input provided is not a valid conversation or contains insufficient information to analyze. The conversation data appears to be missing or incomplete, as it only contains ""nan"" (which typically stands for ""not a number"" or indicates missing data).
+
+To proceed with the analysis, I would need a complete and coherent conversation between the customer and the bot. Please provide a valid conversation text block so that I can assist you in identifying relevant company policies.
+
+If you have any other questions or need further assistance, feel free to ask!"
 CHac51865cdde24b66b5295918b78d9008,"Consumer: nan
 Bot:           ykn Afaan Oromoon isin gargaaruu nan dandaa
 Bot:           ykn Afaan Oromoon isin gargaaruu nan dandaa
@@ -765,28 +791,30 @@ Bot:  Maidscc        :blush:    
 
                     
 Consumer:                                                
-Bot:                  ","{
+Bot:                  ","```json
+{
   ""policies"": [
     {
-      ""policy_id"": ""policy_71"",
-      ""title"": ""Language Use and Communication Style"",
+      ""policy_id"": ""policy_001"",
+      ""title"": ""Language and Communication Guidelines"",
       ""relevance_score"": 0.90,
       ""excerpt"": ""Speak in the maid's language if you can detect it, and never switch languages unless they switch first. Keep replies concise and focused solely on the details the customer requests.""
     },
     {
-      ""policy_id"": ""policy_72"",
+      ""policy_id"": ""policy_002"",
       ""title"": ""Medical Emergency Handling"",
       ""relevance_score"": 0.92,
       ""excerpt"": ""Upon identifying any customer input that indicates a potential medical emergency, you must immediately open a complaint to the 'Medical Consultant skill' with the message: 'Maid has a medical emergency'.""
     },
     {
-      ""policy_id"": ""policy_73"",
-      ""title"": ""Routine Check-ups and Insurance"",
+      ""policy_id"": ""policy_003"",
+      ""title"": ""Out-of-Scope Questions"",
       ""relevance_score"": 0.88,
-      ""excerpt"": ""If the customer implies that they want to do a routine check-up, always inform them that routine check-ups are not covered by the insurance.""
+      ""excerpt"": ""If the customer asks about topics not related to maids.cc or maids.cc services, politely decline to answer the question and suggest seeking expert help elsewhere.""
     }
   ]
-}"
+}
+```"
 CHafaaf71e101d458fa72c56508bdb1fc1,"Consumer: You are not replying to my quiries
 Consumer: I will repeat
 Consumer: 
@@ -821,7 +849,30 @@ LEAVE IT NOW
 THANKS AGAIN FOR NOT SHARING THE DETAILS OF INSURANCE AND APPROED CLINICS
 
 
-STILL UNABLE TO UNDERSTAND YOUR GOALS ",Agent stopped due to iteration limit or time limit.
+STILL UNABLE TO UNDERSTAND YOUR GOALS ","```json
+{
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_201"",
+      ""title"": ""GP Referral Policy"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""Whenever a customer inquires about hospital visits or specialist clinics, always ask if they have a GP referral. Explain to them that they must see a General Practitioner first, who will refer them to a specialist if needed, according to the insurance policy.""
+    },
+    {
+      ""policy_id"": ""policy_202"",
+      ""title"": ""Insurance Coverage Percentages"",
+      ""relevance_score"": 0.87,
+      ""excerpt"": ""The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient.""
+    },
+    {
+      ""policy_id"": ""policy_203"",
+      ""title"": ""Redirecting to Medical Facilities & Providing Links"",
+      ""relevance_score"": 0.92,
+      ""excerpt"": ""Provide the clinic link only when you have assessed the symptoms and determined that a clinic visit is necessary based on the severity/nature of the condition.""
+    }
+  ]
+}
+```"
 CHcfba90db30c54b6ca7059eed013c6dba,"System: Hello from maidscc You were just trying to reach us on a number that is unavailableThis is our dedicated support linesave it for future use If you ever need anything just WhatsApp us here and well be happy to help    
 Consumer: Hello
 Consumer: I want to ask about the medical insurance of my maid
@@ -854,6 +905,12 @@ Consumer: nan","{
       ""title"": ""Symptom Collection Priority"",
       ""relevance_score"": 0.88,
       ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+    },
+    {
+      ""policy_id"": ""policy_402"",
+      ""title"": ""Waiting for Insurance Approval"",
+      ""relevance_score"": 0.87,
+      ""excerpt"": ""Inform the customer clearly and politely that we only purchase the insurance on behalf of the maids, and that approvals are handled directly by NAS, the insurance company. Provide them with this number to call the insurance: 800-2311.""
     }
   ]
 }
@@ -883,28 +940,22 @@ Bot: Thank you for reaching out allow me a moment please
 Consumer: 1 month ago","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_102"",
-      ""title"": ""Physiotherapy Coverage Policy"",
-      ""relevance_score"": 0.95,
-      ""excerpt"": ""The insurance covers up to 6 physiotherapy sessions per year, and the maid will need to pay 20% of the cost for these sessions.""
-    },
-    {
-      ""policy_id"": ""policy_103"",
+      ""policy_id"": ""policy_80"",
       ""title"": ""Reimbursement Policy"",
-      ""relevance_score"": 0.90,
-      ""excerpt"": ""The insurance does not have a reimbursement option for medical costs.""
+      ""relevance_score"": 0.95,
+      ""excerpt"": ""If the customer asks you about reimbursement for medical costs, always tell them that the insurance does not have that option.""
     },
     {
-      ""policy_id"": ""policy_104"",
-      ""title"": ""Medical Tests Pre-Approval Policy"",
-      ""relevance_score"": 0.88,
-      ""excerpt"": ""All medical tests and procedures need to be pre-approved by the insurance, except for life-threatening emergencies.""
-    },
-    {
-      ""policy_id"": ""policy_105"",
+      ""policy_id"": ""policy_72"",
       ""title"": ""Symptom Collection Priority"",
-      ""relevance_score"": 0.87,
-      ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+      ""relevance_score"": 0.92,
+      ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation, you must first attempt to collect information about the patient’s symptoms.""
+    },
+    {
+      ""policy_id"": ""policy_79"",
+      ""title"": ""Physiotherapy Coverage"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""If the customer asks about physiotherapy coverage, inform them that the insurance only covers up to 6 physiotherapy sessions per year. Also, inform them that they will have to pay the remaining 20% of the cost for these covered sessions.""
     }
   ]
 }
@@ -921,21 +972,22 @@ Consumer: What trouble in insurance
 Bot: I apologize for the confusion in my previous message What can I help you with today regarding maidscc services
 Consumer: I really need a treatment
 Consumer: I wanna talk about my health insurance","{
-""policies"": [
-{
-""policy_id"": ""policy_201"",
-""title"": ""Insurance Facility Access"",
-""relevance_score"": 0.90,
-""excerpt"": ""If a customer is having trouble accessing insurance facilities, inform them that approvals are handled directly by NAS, the insurance company. Provide them with the contact number 800-2311 for assistance.""
-},
-{
-""policy_id"": ""policy_305"",
-""title"": ""Medical Assistance for Maids"",
-""relevance_score"": 0.88,
-""excerpt"": ""If a maid is unwell and has not visited a clinic, suggest going to the maids.cc accommodation for help. The staff there can connect her with the medical team.""
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_201"",
+      ""title"": ""Insurance Facility Access"",
+      ""relevance_score"": 0.92,
+      ""excerpt"": ""If a customer is having trouble accessing facilities with their insurance, inform them that approvals are handled directly by NAS, the insurance company. Provide them with the contact number 800-2311 for assistance.""
+    },
+    {
+      ""policy_id"": ""policy_202"",
+      ""title"": ""Health Insurance Coverage"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""The insurance covers both acute and chronic conditions. For any issues related to insurance approval or facility access, customers should contact NAS directly.""
+    }
+  ]
 }
-]
-}"
+```"
 CHf08805689645400d9648416f1b089dbb,"Bot: How much does the headache hurt on a scale from 1 to 10 where 1 is a little pain and 10 is a lot of pain
 Consumer: 1 is 6
 4 is 2
@@ -947,20 +999,19 @@ Consumer: Please try to contact the insurance to confirm everything for the test
 Bot: We only purchase the insurance on behalf of the maids and approvals are handled directly by NAS the insurance company You can call NAS at 8002311 You will not be charged any fees for this call Please make sure that the clinic or hospital has submitted the necessary documents for approval","{
   ""policies"": [
     {
-      ""policy_id"": ""policy_124"",
-      ""title"": ""Waiting for Insurance Approval"",
-      ""relevance_score"": 0.95,
-      ""excerpt"": ""If the customer says that they are waiting for insurance approval or anything related to approval/rejection status, inform them clearly and politely that we only purchase the insurance on behalf of the maids, and that approvals are handled directly by NAS, the insurance company. Provide them with this number to call the insurance: 800-2311. Inform them that they will not be charged any fees for this call. Push them to reach out to NAS themselves after making sure that the clinic or hospital has submitted the necessary documents for approval.""
+      ""policy_id"": ""policy_79"",
+      ""title"": ""Symptom Requirement"",
+      ""relevance_score"": 0.90,
+      ""excerpt"": ""You must never continue any medical conversation until you explicitly know the patientʼs symptoms. You must always ask for symptoms first before discussing insurance questions.""
     },
     {
-      ""policy_id"": ""policy_305"",
-      ""title"": ""Symptom Collection Priority"",
+      ""policy_id"": ""policy_80"",
+      ""title"": ""Waiting for Insurance Approval"",
       ""relevance_score"": 0.88,
-      ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patient’s symptoms. Politely explain that understanding their symptoms is the best way to help them determine the right course of action.""
+      ""excerpt"": ""Inform the customer clearly and politely that we only purchase the insurance on behalf of the maids, and that approvals are handled directly by NAS, the insurance company. Provide them with this number to call the insurance: 800-2311. Inform them that they will not be charged any fees for this call. Push them to reach out to NAS themselves after making sure that the clinic or hospital has submitted the necessary documents for approval.""
     }
   ]
-}
-```"
+}"
 CHffaecac98a81477b8eb45c0b45135084,"Consumer: Hello good afternoon
 Consumer: Im sonia Romero
 Consumer: My concern is i have cough   and 4 daya now
@@ -1016,19 +1067,13 @@ Bot: Yes Mucosolvan syrup is suitable for your wet cough with white phlegm Based
 Consumer: nan
 Consumer: ok thank you so much
 Bot: You are welcome :blush:","{
-""policies"": [
-{
-""policy_id"": ""policy_305"",
-""title"": ""Symptom Collection Priority"",
-""relevance_score"": 0.88,
-""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
-},
-{
-""policy_id"": ""policy_402"",
-""title"": ""OTC Medication Recommendation"",
-""relevance_score"": 0.87,
-""excerpt"": ""Provide OTC recommendations for any condition that is determined not to be a medical emergency. Specify the exact medication name, dose, frequency, and duration.""
-}
-]
+  ""policies"": [
+    {
+      ""policy_id"": ""policy_305"",
+      ""title"": ""Symptom Collection Priority"",
+      ""relevance_score"": 0.88,
+      ""excerpt"": ""Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information about the patient's symptoms before providing clinic information.""
+    }
+  ]
 }
 ```"
