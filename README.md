@@ -1,6 +1,6 @@
 # Policy Compliance Pipeline
 
-This project automates the process of analyzing Doctors (for now) Bot to identify relevant company policies, assess compliance, and flag violations. The workflow is designed to provide context-rich, policy-aware analysis, leveraging advanced AI and graph database technologies.
+This project automates the process of analyzing Doctors (for now) Bot to identify relevant company policies, assess compliance, and flag violations. The workflow is designed to provide context-rich, policy-aware analysis, leveraging **neo4j graph database**.
 
 ---
 
@@ -34,7 +34,7 @@ Raw segmented chat logs (CSV) containing conversation IDs, agent names (BOT or h
 * Fixes garbled text due to encoding issues.
 
 **Output:**
-A processed CSV where each BOT message is enriched with relevant context from human agents.
+A processed CSV where each **BOT message is enriched with relevant context from human agents**.
 
 ---
 
@@ -49,7 +49,7 @@ Contextualized conversations from Step 1.
 * **GraphRAG Agent:**
 
   * Uses GPT-4o for semantic understanding.
-  * Connects to a Neo4j graph database with policies (ingested via `neo4j_ingestion.py`).
+  * **Connects to a Neo4j graph database** with policies (ingested via `neo4j_ingestion.py`).
   * Retrieves relevant policies through:
 
     * **Structured Search:** Neo4j graph traversal.
@@ -131,4 +131,4 @@ Enables structured and semantic search in Step 2.
 * **GraphRAG agent** combines semantic + graph-based policy retrieval.
 * Uses **Neo4j** for efficient policy querying and storage.
 * LLM checks for nuanced compliance and edge cases.
-* Outputs are ready for reporting and analytics.
+* Outputs are ready for bot performance reports.
