@@ -1,0 +1,1008 @@
+conv_id,Messages,policies_related,policies_violated,policies_high_relevance
+CH4c73265d86a042508196343784794e7d,"Consumer: Hi good morning SirMadam
+This is Yvette 
+I cant access my Yaya app on my phone I dont know why
+Please I wish to fine out more about my insurance
+Bot: Hello I am Doctor Mia The Yaya app was linked to the previous insurance provider Your current insurance is under NAS managed by Orient
+How are you feeling today Please tell me about your symptoms so I can help you
+Consumer: Thank you Doc Mia
+I woke up two days ago and had sore my whole mouth that I couldnt eat cuz of the pain
+Then I feel pain on my legs from my knees down to my feets
+Bot: For a sore mouth it is best to see a dentist We can help you find the nearest dental clinic Please tell me your full address including the street building and city
+Consumer: Then Im feeling on and off pain on my throat
+Bot: When did your throat pain start
+Consumer: Union metro station Al Rigga street Alfardan building
+Bot: Here are the nearest covered Dental to you:
+1 Medze Clinic Deira Dubai
+Address: https:wwwgooglecommapsq2526668555307782
+Telephone: 97142380924
+2 Jupiter Speciality Medical Center  Dubai
+Address: https:wwwgooglecommapsq2524486255298033
+Telephone: 97143866330
+3 AL ARIF MEDICAL CENTRE AL NAHDA  SHARJAH Al Arif Heart  Childrens Medical Centre LLC  Sharjah
+Address: https:wwwgooglecommapsq2530228355383951
+Telephone: 97167154999
+Consumer: The pain comes and disappears within 24hours  I felt it yesterday and this morning I cant feel it again
+Bot: When did your throat pain start
+Consumer: Monday
+Bot: How would you describe the pain in your throat Is it a cutting pain a soft pain or a beating pain
+Consumer: Cutting pain very sharp as if it were a needle 
+Bot: What makes your throat pain worse
+Consumer: Coughing
+Bot: What makes your throat pain better or go away
+Consumer: If I dont eat or swallow anything for a while it goes away
+Bot: Have you tried any treatments or medications for your throat pain
+Consumer: No
+Bot: On a scale of 1 to 10 with 10 being the worst how severe is your throat pain
+Consumer: 5
+Bot: Do you have any known chronic conditions or allergies
+Consumer: No
+Bot: Based on these symptoms a clinic visit is not required at this time
+You can take Sinecod syrup for your cough and Panadol 500 mg tablets for your throat pain
+   Take 5 mL of Sinecod syrup every 8 hours
+   Take 1 tablet of Panadol 500 mg every 6 hours as needed for pain
+Here is some lifestyle advice:
+   Drink plenty of warm liquids like water or tea
+   Rest your voice as much as possible
+   Avoid foods that irritate your throat such as spicy or acidic foods
+   You should start feeling better within 3 to 5 days If your symptoms do not improve or get worse please reach out again
+Consumer: Thank you very much Doc
+Bot: You are welcome :blush:
+Consumer: :blush:
+Consumer: Do have a wonderful day
+Bot: You too
+Consumer: Thank you :praytype12:
+Bot: You are welcome :blush:
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury","[
+  {
+    ""title"": ""Symptom Collection Priority"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patientʼs symptoms."",
+    ""exceptions"": ""Do not collect symptoms in case of dental concerns. When speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms.""
+  },
+  {
+    ""title"": ""Handling Clinic/Link Requests"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""If the customer asks for clinic information or other links (pharmacies, hospitals, diagnostics) before you have had a chance to fully assess the patientʼs symptoms, politely acknowledge their question but explain that you need to understand the symptoms first, as they might not need a clinic visit."",
+    ""exceptions"": ""If the customer insists a third time (cumulatively in the conversation), you may then provide the relevant clinic link(s) as described in the 'Diagnosis & Recommendation' section.""
+  },
+  {
+    ""title"": ""MyNas App Inquiry"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""If the customer explicitly asks for an app or mentions wanting to download one related to their insurance, then inform them about the MyNas app. Do not suggest or promote the MyNas app unless directly prompted by the customer's mention of an app or wanting to download one."",
+    ""exceptions"": ""If the customer specifically asks for the E-card for their insurance, inform them to download the MyNas app to access their E-card.""
+  }
+]","{
+  ""policy_violated"": true,
+  ""policies_violated"": [
+    {
+      ""title"": ""Handling Clinic/Link Requests"",
+      ""description"": ""If the customer asks for clinic information or other links (pharmacies, hospitals, diagnostics) before you have had a chance to fully assess the patient’s symptoms, politely acknowledge their question but explain that you need to understand the symptoms first, as they might not need a clinic visit.""
+    }
+  ],
+  ""violation_summary"": ""The bot provided clinic information before fully assessing the patient's symptoms. The bot should have first completed the symptom assessment before offering clinic details, as per the policy.""
+}",Symptom Collection Priority
+CH93aba577e9354b2295b62f7f80d35391,"Consumer: Good morning
+Consumer: Can I use my maid cc visa to go to hospital
+Bot: Hello I am Doctor Mia What symptoms are you experiencing
+Consumer: Very dry cough with chest and headache
+Bot: When did your dry cough chest pain and headache start
+Consumer: On Saturday
+Bot: Can you tell me where exactly on your chest you feel the pain
+Consumer: Today I didnt sleep its too much
+Consumer: I have a fever and same time am feeling cold
+Bot: Can you describe the chest pain Is it a cutting pain a soft pain or a beating pain
+Consumer: Cutting
+Bot: Based on these symptoms a clinic visit is not required at this time I recommend you take Panadol Cold  Flu Take 1 tablet every 6 hours as needed for your fever cold and headache For your dry cough you can take Prospan cough syrup Take 5 mL of Prospan syrup every 8 hours
+Here is some lifestyle advice:
+   Drink plenty of warm liquids like water or tea
+   Get enough rest
+   Avoid cold drinks
+   You should start to feel better in about 3 to 5 days
+Consumer: I have taken Panadol since Monday and its not working
+Bot: How have your dry cough chest pain and headache changed since you started taking Panadol Have any new symptoms appeared
+Consumer: Oh my:femalefacepalm: please I think for now I need help not questions kindly
+Bot: Here are the nearest covered Clinics to you:
+1 Houston Medical Clinic Al Barsha  Dubai
+Address: https:wwwgooglecommapsq2511664555205853
+Telephone: 97143850603
+2 Al Shifa Al Khaleeji Medical Centre LLC Branch  Dubai
+Address: https:wwwgooglecommapsq24998111551727006
+Telephone: 97148800920
+3 G S M MEDICAL CENTRE AL SATWA DUBAI
+Address: https:wwwgooglecommapsq250041191551522054
+Telephone: 97148831002
+Bot: Is there anything else I can help you with regarding your health or the clinic visit
+Consumer: :pray: thanks
+Bot: You are welcome :blush:
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury","[
+  {
+    ""title"": ""Symptom Collection Priority"",
+    ""relevance_score"": 0.92,
+    ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patientʼs symptoms."",
+    ""exceptions"": ""Do not collect symptoms in case of dental concerns. When speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms.""
+  },
+  {
+    ""title"": ""Clinic Referral Guidelines"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""If a customer reports symptoms such as fever, chest pain, or persistent cough, and over-the-counter medication has not been effective, you should refer them to the nearest clinic for further evaluation."",
+    ""exceptions"": ""Do not refer to a clinic if the symptoms are mild and improving with home care, unless the customer insists on a referral.""
+  }
+]","{
+  ""policy_violated"": true,
+  ""policies_violated"": [
+    {
+      ""title"": ""Clinic Referral Guidelines"",
+      ""description"": ""If a customer reports symptoms such as fever, chest pain, or persistent cough, and over-the-counter medication has not been effective, you should refer them to the nearest clinic for further evaluation.""
+    }
+  ],
+  ""violation_summary"": ""The bot initially advised against a clinic visit despite the consumer reporting persistent symptoms (fever, chest pain, and cough) that were not improving with over-the-counter medication. The bot only provided clinic information after the consumer expressed frustration and a need for help, which indicates a delay in appropriate referral.""
+}",Symptom Collection Priority
+CH5dffab7e3669495f92bc1d8296a4920d,"Consumer: Goodmorning maam  Can i ask can i avail dental ensurance  cleaning and adjustment 
+Bot: Dental insurance covers dental consultation extraction fillings root canal treatment scaling Xrays antibiotics and prophylaxis
+Consumer: Can i ask the referral maam  For Saturday  Abu dhabi area 
+Bot: For a dental clinic its best to see a dentist We can help you find the nearest dental clinic
+The patient gets 500 AED from insurance for dentist visits Heres how it works:
+1 If the treatment is cheap less than 500 AED:
+    Insurance pays most of it about 70
+    The patient pays the rest
+    Each time the money left in the 500 AED goes down
+2 If the treatment is expensive 500 AED or more:
+    Insurance gives only 350 AED
+    The patient pays the rest
+    After this the 500 AED is finished
+After the 500 AED is used up insurance will not pay anymore
+Please share your full address street apartment city so I can find the nearest dental clinics for you
+Bot: We hope youre feeling okay We care about your health and want to help If you need anything or if its urgent please tell us Were here for you
+Consumer: im here almuneera island al raba street block a
+Consumer: abu dhabi
+Bot: Here are the nearest covered Dental to you:
+1 Oasis Medical Centre Branch 1  Abu Dhabi
+Address: https:wwwgooglecommapsq244148718543726007
+Telephone: 97126763282
+2 Ittihad Medical Center  Abu Dhabi
+Address: https:wwwgooglecommapsq244859354357165
+Telephone: 97126226611
+3 FAITH JABAL MEDICAL CENTER JABAL ALI DUBAI
+Address: https:wwwgooglecommapsq25010200678956551060588599108
+Telephone: 97143956479
+Bot: The patients insurance card number is NFFHNM3FLFLFJLED
+Consumer: ok thabkyou maam any time i come the clinic
+Bot: You should contact the dental clinic directly to book your appointment
+Consumer: Ok maam thankyou
+Bot: You are welcome :blush: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury","[
+  {
+    ""title"": ""Dental Insurance Coverage"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""When asked about dental coverage details for a specific maid, explain that the insurance coverage for covered treatments is capped at a total insurance payout of 500 AED per maid over the policy period; for treatments costing less than 500 AED, insurance pays the minimum of 70% of the cost or the maid's remaining limit, reducing the limit accordingly, while for treatments costing 500 AED or more, insurance pays a maximum of 350 AED (if remaining limit is at least 350 AED), using up the entire 500 AED limit, and the patient pays the rest, with no further coverage once the maid's 500 AED limit is fully utilized."",
+    ""exception"": ""Do not provide this list unless asked specifically about covered services.""
+  },
+  {
+    ""title"": ""Directing to Dental Clinic"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""If the customer wants to be redirected to a clinic, send the link of covered dental clinics. If the customer tells you the link does not work, then you should send the sheet instead. Do not send the sheet unless the link is reported as not working."",
+    ""exception"": ""Always include the insurance card number of the patient in the same message when directing to a dental clinic.""
+  },
+  {
+    ""title"": ""Safe Dental Referral"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""You must never refer a customer to a dental clinic if the toothache is accompanied by fever or flu-like symptoms. You should only direct them to a dental clinic when the issue described is clearly dental in nature and does not include these additional systemic symptoms."",
+    ""exception"": ""If systemic symptoms are present, advise seeking general medical advice first.""
+  }
+]","{
+  ""policy_violated"": true,
+  ""policies_violated"": [
+    {
+      ""title"": ""Directing to Dental Clinic"",
+      ""description"": ""If the customer wants to be redirected to a clinic, send the link of covered dental clinics. If the customer tells you the link does not work, then you should send the sheet instead. Do not send the sheet unless the link is reported as not working.""
+    }
+  ],
+  ""violation_summary"": ""The bot provided links to dental clinics without including the insurance card number in the same message, which is required by the policy.""
+}",Dental Insurance Coverage
+CH4887777266f74e71a4132fd6df77de2d,"System: Hello from maidscc You were just trying to reach us on a number that is unavailableThis is our dedicated support linesave it for future use If you ever need anything just WhatsApp us here and well be happy to help    
+Consumer: Good morning
+Could you please let me know where Medusa can go for checkups
+Consumer: I dont have any details about her insurance
+Bot: Hello I am Doctor Mia
+The insurance will cover 80 of clinic visits and 70 of the cost if your maid gets medicine from the clinic with a prescription The insurance is under NAS managed by Orient
+For the most accurate assessment please have your maid reach out to us directly to discuss her symptoms This allows us to understand her condition better
+Consumer: She needs to have her eyesight checked
+Consumer: And please let me know where I can take her
+Consumer: I need a list of the clinics and hospitals covered by her insurance
+Bot: Here are the nearest covered Clinics to you:
+1 Houston Medical Clinic Al Barsha  Dubai
+Address: https:wwwgooglecommapsq2511664555205853
+Telephone: 97143850603
+2 Multi Care Medical Centre Al Quoz Dubai
+Address: https:wwwgooglecommapsq25142323552485255
+Telephone: 9714245863
+3 Anaya Medical Center  Dubai
+Address: https:wwwgooglecommapsq251539552457
+Telephone: 97143441615
+Consumer: Are there any clinics in JVC
+Bot: Here are the nearest covered Clinics to you:
+1 Al Shifa Al Khaleeji Medical Centre LLC Branch  Dubai
+Address: https:wwwgooglecommapsq24998111551727006
+Telephone: 97148800920
+2 Houston Medical Clinic Al Barsha  Dubai
+Address: https:wwwgooglecommapsq2511664555205853
+Telephone: 97143850603
+3 G S M MEDICAL CENTRE AL SATWA DUBAI
+Address: https:wwwgooglecommapsq250041191551522054
+Telephone: 97148831002
+Bot: I am here to help your maid with her medical needs Please let me know if you have any other questions
+Consumer: No thank you
+Bot: You are welcome I hope your maid feels better soon
+Consumer: Thank you
+Bot: You are welcome :blush:
+Bot: I hope I was able to assist you today If you have any further concerns or your maid ever feels unwell dont hesitate to reach out Im always here to help :relaxed:","[
+  {
+    ""title"": ""Routine Check-ups Coverage"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""If the customer implies that they want to do a routine check-up, always inform them that routine check-ups are not covered by the insurance."",
+    ""exception"": ""Routine check-ups are not covered unless specified otherwise in special cases.""
+  },
+  {
+    ""title"": ""Insurance Network Details"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""If the customer explicitly asks for the cases that are included in the insurance network, you must always send them the policy details document."",
+    ""exception"": ""Do not send the document unless explicitly asked for insurance network details.""
+  },
+  {
+    ""title"": ""Specific Eye-Related Concerns"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""If the maid describes eye-related concerns: If the symptoms suggest a serious condition, you must recommend that the patient visit an ophthalmologist or a clinic. If the concerns are non-serious, inform her that insurance typically does not cover these types of services."",
+    ""exception"": ""Non-serious vision-related problems needing glasses or routine check-ups are typically not covered.""
+  }
+]","{
+  ""policy_violated"": true,
+  ""policies_violated"": [
+    {
+      ""title"": ""Routine Check-ups Coverage"",
+      ""description"": ""If the customer implies that they want to do a routine check-up, always inform them that routine check-ups are not covered by the insurance.""
+    },
+    {
+      ""title"": ""Specific Eye-Related Concerns"",
+      ""description"": ""If the maid describes eye-related concerns: If the symptoms suggest a serious condition, you must recommend that the patient visit an ophthalmologist or a clinic. If the concerns are non-serious, inform her that insurance typically does not cover these types of services.""
+    }
+  ],
+  ""violation_summary"": ""The bot failed to inform the user that routine check-ups, including eye check-ups, are not covered by insurance. Additionally, the bot did not clarify whether the eye-related concern was serious or non-serious and did not inform the user about the typical insurance coverage for non-serious vision-related problems.""
+}",Routine Check-ups Coverage
+CH4de83de02ee1436d8a3b8c9fa50d9944,"Consumer: Ok thank you so much
+Bot: You are welcome I am glad to hear you are feeling better Please do not hesitate to reach out if you need anything else :blush:
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury",[],"{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",
+CHc6d83225ed00497787b2024ee2963330,"Consumer: Hello good morning
+Consumer: I dont feel well my foot is hurting me so much
+Bot: Welcome to Maidscc this is Jane :blush: How may I assist you today Faith
+Consumer: I dont feel well my foot is hurting me so much
+Bot: Hello I am Doctor Mia When did your foot start hurting you
+Consumer: Its  been like a month  now
+Bot: Can you please tell me which region number on the picture shows where your foot hurts the most
+Bot: 
+Consumer: Tue Feb 04 2025 00:00:00 GMT0200 Eastern European Standard Time
+Bot: Can you describe the pain Is it a cutting pain a soft pain or a beating pain
+Consumer: Cutting pain
+Bot: Does the cutting pain in your foot stay all the time or does it come and go
+Consumer: Sometimes it would go away when I wake up  bt today even my lower back is in pain
+Bot: When did your lower back pain start
+Consumer: Last two weeks
+Bot: Can you please tell me which region number on the picture shows where your lower back hurts the most
+Bot: 
+Consumer: 8
+Bot: Does the pain in your lower back stay all the time or does it come and go
+Consumer: It comes and goes bt its been  persistent  since  Saturday
+Bot: What makes your lower back pain better or worse
+Consumer: I need to see a doctor
+Bot: Understanding your symptoms helps me to determine the best way to help you What makes your lower back pain better or worse
+Consumer: Too much movement  makes  my right foot  to hurt  I havent  taken  any pain killer  since this started
+Bot: What makes your lower back pain better or worse
+Consumer: Normally  when I sleep at night  the pain is gone  in the morning
+Bot: What makes your lower back pain worse
+Consumer: Too much movement  up and down
+Bot: What makes the cutting pain in your right foot better or go away
+Consumer: If I rest it goes away but since the last three days its persistent
+Bot: Do you have any other medical conditions or allergies
+Consumer: My stomach is bloated  also
+Bot: When did your stomach bloating start
+Consumer: Sunday
+Bot: Based on these symptoms a clinic visit is not required at this time
+You can take Ibuprofen 400mg tablets for your foot and back pain Take one tablet every 8 hours after food for 5 days
+For your stomach bloating you can take Buscopan Hyoscine Butylbromide tablets Take one tablet three times a day before food for 3 days
+Here is some lifestyle advice:
+   Apply a warm compress to your lower back for 1520 minutes a few times a day
+   Try gentle stretching exercises for your back and foot
+   Avoid prolonged standing or sitting
+   Wear comfortable and supportive shoes
+   Eat smaller more frequent meals to help with bloating
+   Avoid foods that cause gas such as beans lentils and carbonated drinks
+   Drink plenty of water
+You should feel better within 3 to 5 days If your symptoms do not improve or worsen after following this guidance please reach out again
+Consumer: Okay thank you
+Bot: You are welcome :blush:
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury","[
+  {
+    ""title"": ""Symptom Collection Priority"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patientʼs symptoms."",
+    ""exceptions"": ""Do not collect symptoms in case of dental concerns. When speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms.""
+  },
+  {
+    ""title"": ""Decision Logic (OTC vs. Clinic)"",
+    ""relevance_score"": 0.92,
+    ""excerpt"": ""Based on the gathered symptoms, severity, duration, and any reported chronic conditions/allergies, assess the likely condition. Your absolute strongest preference and default action is to recommend appropriate Over-the-Counter (OTC) medications. You must provide OTC recommendations for any condition that is determined not to be a medical emergency, not severely dangerous, and does not clearly require immediate professional medical attention based on your assessment."",
+    ""exceptions"": ""Only consider recommending a clinic visit if the symptoms clearly indicate a serious condition, a potential medical emergency, or if, due to the patientʼs chronic conditions or allergies, no safe and effective OTC options are available.""
+  },
+  {
+    ""title"": ""Using Images for Pain Location"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""For symptoms involving pain (specifically headaches, stomachaches, or leg pain), you must use the provided image links to help the maid pinpoint the exact location of her pain by asking her to identify the region number."",
+    ""exceptions"": ""Do not use images for pain location if the customer explicitly states they do not wish to use them or if the pain is described in a non-specific manner.""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}","Symptom Collection Priority,Decision Logic (OTC vs. Clinic)"
+CH380b5902a7b94e32bfaecdcb3fa8cc59,"Consumer: Good morning
+Consumer: The doctor give me medicine for stop the bleeding I take the medicine for 20days
+Consumer: But the doctor said the ISV is not included in my insurance and the scan also is not included to my insurance
+Bot: Thank you for the update To help me understand your situation better can you please tell me what symptoms you are feeling
+Consumer: Because after 20days I come back to hospital for ultrasound To find out what is causing my bleeding the doctor asked which hospital is accredited by my insurance to do the ultrasound
+Bot: Please share the referral letter for the ultrasound
+Consumer: my feeling now is good because the blood has stopped now
+Bot: It is good to hear that you are feeling well and the bleeding has stopped
+Please share the referral letter for the ultrasound All medical tests and procedures need to be preapproved by the insurance except for lifethreatening emergencies
+Consumer: after 20 days the doctor gave me the referral maam
+Bot: Please share the referral letter for the ultrasound
+Consumer: When the doctor give me the referral maam I will send to you right a way maam
+Bot: I understand you will send the referral letter when you receive it from the doctor I will wait for you to send it
+Is there anything else I can help you with right now
+Consumer: 
+Consumer: 
+Consumer: 
+Consumer: 
+Bot: Here are the nearest covered Clinics to you:
+1 Al Shifa Al Khaleeji Medical Centre LLC Branch  Dubai
+Address: https:wwwgooglecommapsq24998111551727006
+Telephone: 97148800920
+2 G S M MEDICAL CENTRE AL SATWA DUBAI
+Address: https:wwwgooglecommapsq250041191551522054
+Telephone: 97148831002
+3 Houston Medical Clinic Al Barsha  Dubai
+Address: https:wwwgooglecommapsq2511664555205853
+Telephone: 97143850603
+Bot: Have you started taking the Dydrogesterone medication
+Consumer: 
+Consumer: And the doctor said this to me
+Bot: Thank you for sending the referral letter for the ultrasound
+All medical tests and procedures need to be preapproved by the insurance The only exception is for lifethreatening emergencies
+Do you have any questions about the ultrasound or would you like me to help you find a diagnostic center
+Bot: I understand that the insurance has rejected the gynecologist consultation and the ultrasound scan at the centers the clinic uses
+All medical tests and procedures need to be preapproved by the insurance The only exception is for lifethreatening emergencies
+Would you like me to help you find a diagnostic center that is covered by your insurance for the ultrasound scan
+Consumer: That I need to pay 150 for consultation because the ISV rejected from the insurance
+Consumer: Yes please
+Bot: Please share your full address including the street building and city so I can find the nearest diagnostic centers for you
+Consumer: Yes I already started
+Bot: It is good that you have started taking the medicine
+Please share your full address including the street building and city so I can find the nearest diagnostic centers for you
+Consumer: Villa T5 jumeirah park district 9 street I 11
+Bot: Even with a covered diagnostic center the ultrasound scan will still need preapproval from your insurance The insurance will cover 80 of clinic visits and 70 of the cost if you get medicine from the clinic with a prescription
+Consumer: Yes maam how about the payment of my consultation  because the doctor said I have to pay when I get back
+Bot: The insurance will cover 80 of clinic visits and 70 of the cost if you get medicine from the clinic with a prescription The insurance is under NAS managed by Orient
+Consumer: if you approved that maam i dont need to pay 150
+Bot: I cannot approve payments for your consultation Approvals are handled directly by NAS the insurance company The insurance will cover 80 of clinic visits and 70 of the cost if you get medicine from the clinic with a prescription
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury","[
+  {
+    ""title"": ""Medical Tests Pre-Approval"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""All medical tests and procedures need to be pre-approved by the insurance. The only exception is for life-threatening emergencies, where the patient needs urgent medical attention immediately."",
+    ""exception"": ""Life-threatening emergencies do not require pre-approval.""
+  },
+  {
+    ""title"": ""Insurance Coverage for Medical Costs"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""The insurance will cover 80% of clinic visits and 70% of the cost if you get medicine from the clinic with a prescription. The insurance is under NAS managed by Orient."",
+    ""exception"": ""Coverage is subject to the insurance policy terms and conditions.""
+  },
+  {
+    ""title"": ""Consultation Payment Policies"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""If the customer asks about reimbursement for medical costs, always tell them that the insurance does not have that option. Approvals are handled directly by NAS, the insurance company."",
+    ""exception"": ""Reimbursement is not available; approvals must be sought directly from NAS.""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",Medical Tests Pre-Approval
+CH1dcb6dbd016947bc90a254d52966b0ff,"Consumer: Hello
+Consumer: Am very sick I need to go to the hospital
+Bot: Hello I am Doctor Mia When did you start feeling sick
+Consumer: The day after yesterday
+Bot: Where exactly do you feel sick
+Consumer: Am having headache and am coughing then is hard to breathe when I breathe I feel pain in my chest
+Bot: Can you describe the pain you feel in your chest Is it a cutting pain a soft pain or a beating pain
+Consumer: Cutting pain
+Bot: I am sorry to hear you are feeling this way I am opening a complaint for you to the Medical Consultant skill I will also provide you with the nearest clinics
+Consumer: Thank you as soon us possible am in pain
+Bot: Here are the nearest covered Clinics to you:
+1 Sirajudeen Medical Centre  Dubai
+Address: https:wwwgooglecommapsq25237475530299
+Telephone: 97143345955
+2 Dr Ismail day Surgical Centre Al Karama Dubai
+Address: https:wwwgooglecommapsq252406368552983633
+Telephone: 97143962533
+3 Al Hana Medical Center Satwa Dubai
+Address: https:wwwgooglecommapsq25217745527249
+Telephone: 97143491488
+Bot: Do you have any chronic conditions or allergies
+Consumer: Non of them
+Bot: Please let me know if you need any more help","[
+  {
+    ""title"": ""Symptom Collection Priority"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patientʼs symptoms."",
+    ""exceptions"": ""Do not collect symptoms in case of dental concerns. When speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms.""
+  },
+  {
+    ""title"": ""Handling Clinic/Link Requests"",
+    ""relevance_score"": 0.92,
+    ""excerpt"": ""If the customer asks for clinic information or other links before you have had a chance to fully assess the patientʼs symptoms, politely acknowledge their question but explain that you need to understand the symptoms first, as they might not need a clinic visit. Gently redirect the conversation back to collecting symptoms."",
+    ""exceptions"": ""If the customer insists a third time, you may then provide the relevant clinic link(s).""
+  },
+  {
+    ""title"": ""Safety First (Allergies/Conditions)"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""Always ask about any known chronic conditions or allergies the patient has. You must take this information into careful consideration when assessing symptoms and recommending medication."",
+    ""exceptions"": ""Do not let a chronic condition or allergy automatically prevent you from recommending a suitable OTC medication unless it makes all relevant options unsafe for the patient.""
+  }
+]","{
+  ""policy_violated"": true,
+  ""policies_violated"": [
+    {
+      ""title"": ""Handling Clinic/Link Requests"",
+      ""description"": ""If the customer asks for clinic information or other links before you have had a chance to fully assess the patient’s symptoms, politely acknowledge their question but explain that you need to understand the symptoms first, as they might not need a clinic visit. Gently redirect the conversation back to collecting symptoms.""
+    }
+  ],
+  ""violation_summary"": ""The bot provided clinic links before fully assessing the patient's symptoms. Although the bot collected some symptoms, it did not complete the assessment before providing clinic information, which violates the policy on handling clinic/link requests.""
+}","Symptom Collection Priority,Handling Clinic/Link Requests"
+CHe4ca99a57bf443ba90e2269ddc96eef2,"Consumer: Hello Our maid is very sick Which hospital can she visit
+Bot: Hello I am Doctor Mia I am sorry to hear your maid is not feeling well To ensure the most accurate assessment and provide the best advice please have your maid contact us directly to discuss her symptoms
+Consumer: She has tried to contact you but no one has responded She is very sick and needs to talk to someone
+Bot: I understand your maid needs to speak with someone Please ask your maid to reach out to us directly through this link: https:wame971506715943 This will allow us to speak with her directly about her symptoms
+Consumer: Which insurance company is it
+Consumer: And which hospital can she go to
+Bot: The insurance is under NAS managed by Orient To help your maid I need to ask a few questions about her symptoms When did your maids symptoms start
+Consumer: Last night
+Bot: Where exactly is your maid feeling the symptoms
+Consumer: Headache fever sore throat
+Bot: How would your maid describe the headache Is it a soft pain a beating pain or a cutting pain
+Consumer: Beating
+Bot: How long does the headache last Is it constant or does it come and go
+Bot: I hope I was able to assist you today If you have any further concerns or your maid ever feels unwell dont hesitate to reach out Im always here to help :relaxed:","[
+  {
+    ""title"": ""Directing to Accommodation"",
+    ""relevance_score"": 0.92,
+    ""excerpt"": ""If the maid tells you that she has not visited a clinic or hospital for her current illness, you should suggest that she go to the maids.cc accommodation for help. Explain that the staff there can help her and connect her with the medical team at the accommodation."",
+    ""exception"": ""Do not suggest going to the accommodation if she says she has already visited a medical facility.""
+  },
+  {
+    ""title"": ""Insurance Inquiries"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""If the customer asks about the percentage of insurance coverage for clinic visits or medication, or explicitly asks for the name of the insurance provider, you must provide them with the following details: The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient."",
+    ""exception"": ""Do not provide these percentages or the insurer's name unless specifically asked about coverage percentages or the insurer.""
+  },
+  {
+    ""title"": ""Handling Refusal to Go to Accommodation"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""If, after you suggest going to the accommodation, the maid tells you that she cannot or does not want to go there, you must immediately open a complaint to the 'CC live-out team'. The message for this complaint must be: 'Live-out maid is sick and can’t go to the accommodation'."",
+    ""exception"": ""After opening the complaint, inform the maid that someone will contact her shortly to help her.""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",Directing to Accommodation
+CHbc5db052c0bd46698830f701019762f6,"Consumer: Hi
+Consumer: Morning
+Bot: Welcome to Maidscc this is Jane :blush:
+How may I assist you today Karen
+Consumer: I am going to the doctor You could help me with the insurance document
+Bot: The insurance will cover 80 of clinic visits and 70 of the cost if you get medicine from the clinic with a prescription The insurance is under NAS managed by Orient Your insurance card number is 3MEEEJ3FLFLM2LED
+To help you better please tell me what symptoms you are experiencing
+Consumer: Okay thanks With that number can I manage it or can you send me a document that I can show at the clinic
+Bot: The insurance is linked to your EID and the certificate is not a physical card You can use the insurance card number 3MEEEJ3FLFLM2LED at the clinic
+Consumer: Okay I get it
+Consumer: Thanks
+Bot: Please tell me what symptoms you are experiencing so I can help you
+Consumer: I have inflammation in one eye
+Consumer: It hurts
+Bot: Please send me one photo of your eye so I can see the inflammation
+Consumer: 
+Bot: Can you describe the pain in your eye Is it a cutting pain a soft pain or a beating pain
+Consumer: Beating pain and its constant
+Bot: Do you have any chronic conditions or allergies
+Consumer: No I dont have so far
+Bot: For an eye with beating pain and inflammation it is best to see an ophthalmologist Please share your full address including the street apartment and city so I can help you find the nearest clinic
+Consumer: My bosses made an appointment for me Thank you very much
+Bot: You are welcome I hope you feel better soon
+Consumer: Thats why I am only asking about insurance
+Consumer: But thanks a lot
+Consumer: Have a nice day
+Bot: You are welcome :blush:
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury","[
+  {
+    ""title"": ""Symptom Collection Priority"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patientʼs symptoms."",
+    ""exceptions"": ""Do not collect symptoms in case of dental concerns. When speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms.""
+  },
+  {
+    ""title"": ""Specific Eye-Related Concerns"",
+    ""relevance_score"": 0.92,
+    ""excerpt"": ""If the symptoms suggest a serious condition (e.g., a swollen eye, signs of infection, a clearly injured eye, severe or sudden-onset red eye), you must recommend that the patient visit an ophthalmologist or a clinic."",
+    ""exception"": ""If the concerns are non-serious (e.g., vision-related problems needing glasses, routine check-ups), inform her that insurance typically does not cover these types of services.""
+  },
+  {
+    ""title"": ""Handling Clinic/Link Requests"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""If the customer asks for clinic information or other links before you have had a chance to fully assess the patientʼs symptoms, politely acknowledge their question but explain that you need to understand the symptoms first, as they might not need a clinic visit."",
+    ""exceptions"": ""If the customer insists a third time, you may then provide the relevant clinic link(s).""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",Specific Eye-Related Concerns
+CHfcd5c16eb40b430f95cf9c3b7b999078,"System: Hello from maidscc
+You were just trying to reach us on a number that is unavailable
+This is our dedicated support linesave it for future use If you ever need anything just WhatsApp us here and well be happy to help
+Consumer: Hello
+Consumer: Our maid needs a doctor  can you help us please She has an ache in her ears
+Bot: Were always here to assist you
+Agent: Please have her reach us at https:wame971506715943 so we can provide proper assistance for her
+Consumer: 
+Consumer: This is not available
+Agent: Please tell her to try again I will be waiting for her to help
+Consumer: No she is not","[
+  {
+    ""title"": ""Directing to Accommodation for Medical Assistance"",
+    ""relevance_score"": 0.92,
+    ""excerpt"": ""If the maid tells you that she has not visited a clinic or hospital for her current illness, you should suggest that she go to the maids.cc accommodation for help. Explain that the staff there can help her and connect her with the medical team at the accommodation."",
+    ""exception"": ""Do not suggest going to the accommodation if she says she has already visited a medical facility.""
+  },
+  {
+    ""title"": ""Handling Refusal to Go to Accommodation"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""If, after you suggest going to the accommodation, the maid tells you that she cannot or does not want to go there, you must immediately open a complaint to the 'CC live-out team'. The message for this complaint must be: 'Live-out maid is sick and can’t go to the accommodation'."",
+    ""exception"": ""After opening the complaint, inform the maid that someone will contact her shortly to help her.""
+  },
+  {
+    ""title"": ""Redirecting to Medical Facilities & Providing Links"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""Provide the link only when you have assessed the symptoms and determined that a clinic visit is necessary based on the severity/nature of the condition OR if the customer has insisted for the third time after you initially attempted symptom collection."",
+    ""exception"": ""Do not share clinic links when recommending OTC medication.""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",Directing to Accommodation for Medical Assistance
+CH533d7e4be63044a7b4050dcb2275cb40,"System: Hello from maidscc You were just trying to reach us on a number that is unavailableThis is our dedicated support linesave it for future use If you ever need anything just WhatsApp us here and well be happy to help    
+Consumer: Does she have health insurance
+Bot: Yes your maid has health insurance The insurance is under NAS managed by Orient The insurance will cover 80 of clinic visits and 70 of the cost if your maid gets medicine from the clinic with a prescription
+To help your maid further please tell me about her symptoms Understanding her symptoms will help determine the best course of action
+Consumer: Her body is shaking and feels cold
+Bot: Please tell me when your maids body started shaking and feeling cold
+Consumer: Today
+Bot: Can you describe the shaking Is it a little medium or a lot
+Consumer: A little
+Bot: How long does the shaking and cold feeling last Is it constant or does it come and go
+Consumer: Constant
+Bot: Does your maid have any other symptoms with the shaking and cold feeling
+Consumer: Headache
+Bot: Please tell me the region number where your maid has a headache from the picture
+Bot: 
+Consumer: 2
+Bot: Is the headache a cutting pain a soft pain or a beating pain
+Bot: We hope your maid is feeling okay We care about her and want to help If you need anything or if its urgent please tell us Were here for you
+Bot: I hope I was able to assist you today If you have any further concerns or your maid ever feels unwell dont hesitate to reach out Im always here to help :relaxed:","[
+  {
+    ""title"": ""Symptom Collection Priority"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patientʼs symptoms."",
+    ""exceptions"": ""Do not collect symptoms in case of dental concerns. When speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms.""
+  },
+  {
+    ""title"": ""Medical Emergency Handling"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""Upon identifying any customer input that indicates a potential medical emergency, you must immediately open a complaint to the 'Medical Consultant skill' with the message: 'Maid has a medical emergency'. This includes, but is not limited to: any bleeding (excluding menstruation), difficulty breathing, choking, suspected pneumonia, fainting, seizure, trouble speaking, suspected tuberculosis, numbness, and suspected monkeypox."",
+    ""exceptions"": ""Emergency handling overrides the symptom collection and OTC preference.""
+  },
+  {
+    ""title"": ""Insurance Coverage Details"",
+    ""relevance_score"": 0.87,
+    ""excerpt"": ""Inform the customer that the insurance covers both acute conditions as well as chronic conditions. If the customer asks if the maid has travel insurance, inform them that the insurance is only active in the UAE and does not cover travel outside the UAE."",
+    ""exceptions"": ""Hearing and vision treatment are not covered unless there is a life-threatening emergency related to these.""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",
+CH0be6865b23344710be41f6b892a01a65,"System: Hello from maidscc You were just trying to reach us on a number that is unavailableThis is our dedicated support linesave it for future use If you ever need anything just WhatsApp us here and well be happy to help    
+Consumer: Hi tell me about health insurance
+Bot: Hello I am Doctor Mia Please have your maid reach out to us directly to discuss her symptoms This allows for the most accurate and direct symptom assessment as we need to speak directly with the patient
+Consumer: Which number should she contact
+Bot: Your maid can contact us directly through this link: https:wame971506715943
+Bot: I hope I was able to assist you today If you have any further concerns or your maid ever feels unwell dont hesitate to reach out Im always here to help :relaxed:","[
+  {
+    ""title"": ""Symptom Collection Priority"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patientʼs symptoms."",
+    ""exceptions"": ""Do not collect symptoms in case of dental concerns. When speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms.""
+  },
+  {
+    ""title"": ""Handling Clinic/Link Requests"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""If the customer asks for clinic information or other links (pharmacies, hospitals, diagnostics) before you have had a chance to fully assess the patientʼs symptoms, politely acknowledge their question but explain that you need to understand the symptoms first, as they might not need a clinic visit. Gently redirect the conversation back to collecting symptoms."",
+    ""exceptions"": ""If the customer insists a third time (cumulatively in the conversation), you may then provide the relevant clinic link(s).""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",Symptom Collection Priority
+CH1716300b0c014e0ba6b6b66a5b01b151,"Consumer: Hello
+Consumer: Am sick
+Bot: Hello I am Doctor Mia When did you start feeling sick
+Bot: We hope youre feeling okay We care about your health and want to help If you need anything or if its urgent please tell us Were here for you
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury",[],"{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",
+CH198a99a9018d4794a583b76e666f6781,"Consumer: Hi good morning
+Consumer: Last night i had a little walk at 7 I felt dizziness
+Consumer: Like dizziness i havent felt before
+Bot: When did the dizziness last
+Bot: When did the dizziness last
+Consumer: Until now i have a dizziness
+Bot: How would you describe the dizziness Is it like spinning lightheadedness or feeling unsteady
+Consumer: Until last night every time i move from laying down i felt so dizzy
+Consumer: Spinning dizziness
+Bot: Does anything make the dizziness better or worse
+Consumer: Cause of too much dizziness i vomit last night also
+Consumer: And this morning i try to eat banana i vomit again
+Consumer: Dizziness is there
+Bot: Does anything make the dizziness better
+Consumer: No its keep coming back
+Bot: Do you have any other symptoms besides dizziness and vomiting
+Consumer: I need to move slowly otherwise the dizziness will come more often
+Bot: Do you have any chronic conditions or allergies
+Consumer: No I dont have
+Bot: Does anything make the dizziness better
+Consumer: No its not samz before as last night
+Bot: Based on these symptoms a clinic visit is not required at this time
+You can take Dizinil 50mg or Stugeron 25mg for dizziness Take one tablet every 8 hours as needed
+For nausea and vomiting you can take Hyposec 20mg Take one tablet once a day before food
+Please also try to:
+ Rest in a quiet dark room
+ Drink plenty of clear liquids like water or juice to stay hydrated
+ Eat small bland meals like bananas rice or toast
+ Avoid sudden movements
+ Get enough sleep
+You should feel better in a few days If your symptoms do not improve or get worse please let me know
+Consumer: But we dont have this medicine coz im at work now
+Bot: Here are the nearest covered Pharmacies to you:
+1 Medicina 24 Pharmacy  Sharjah
+Address: https:wwwgooglecommapsq2534472755403198
+Telephone: 97165723255
+2 Hala Pharmacy  Branch 28  Oasis Mall  Sharjah 
+Address: https:wwwgooglecommapsq2534912755409076
+Telephone: 97145610000
+3 Central Private Hospital Pharmacy  Sharjah
+Address: https:wwwgooglecommapsq2536103455398155
+Telephone: 97165639900
+Bot: Were you able to get the medicine from one of the pharmacies
+Bot: We hope youre feeling okay We care about your health and want to help If you need anything or if its urgent please tell us Were here for you
+Consumer: Is this one for dizziness also doctor
+Consumer: 
+Bot: Yes Dizinil 50mg and Stugeron 25mg are for dizziness
+Bot: Thank you for reaching out allow me a moment please
+Consumer: 
+Consumer: 
+Consumer: Can i drink this now
+Agent: Cecilia these are different names from the ones I recommended to you But they work too
+Consumer: Okay doc Ill try this one first thank you
+Agent: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+Consumer: The dizziness is getting worse
+Agent: Please take Dizinil 50mg or Stugeron 25mg for the dizziness","[
+  {
+    ""title"": ""Medication Guidance for Dizziness"",
+    ""relevance_score"": 0.92,
+    ""excerpt"": ""For dizziness, recommend Dizinil 50mg or Stugeron 25mg. Advise taking one tablet every 8 hours as needed. Ensure the customer is aware of the nearest pharmacies where these medications can be obtained."",
+    ""exception"": ""If the customer reports worsening symptoms or additional severe symptoms, advise them to seek immediate medical attention.""
+  },
+  {
+    ""title"": ""Symptom Management and Home Care Advice"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""Advise customers experiencing dizziness to rest in a quiet, dark room, drink plenty of clear liquids, eat small bland meals, avoid sudden movements, and get enough sleep. These measures should help alleviate symptoms."",
+    ""exception"": ""If symptoms persist or worsen despite these measures, recommend seeking medical advice.""
+  }
+]","{
+  ""policy_violated"": true,
+  ""policies_violated"": [
+    {
+      ""title"": ""Medication Guidance for Dizziness"",
+      ""description"": ""For dizziness, recommend Dizinil 50mg or Stugeron 25mg. Advise taking one tablet every 8 hours as needed. Ensure the customer is aware of the nearest pharmacies where these medications can be obtained.""
+    },
+    {
+      ""title"": ""Symptom Management and Home Care Advice"",
+      ""description"": ""Advise customers experiencing dizziness to rest in a quiet, dark room, drink plenty of clear liquids, eat small bland meals, avoid sudden movements, and get enough sleep. These measures should help alleviate symptoms.""
+    }
+  ],
+  ""violation_summary"": ""The bot failed to advise the customer to seek immediate medical attention despite the customer reporting worsening symptoms, which violates the exception in the 'Medication Guidance for Dizziness' policy. Additionally, the bot did not recommend seeking medical advice when symptoms persisted and worsened, violating the exception in the 'Symptom Management and Home Care Advice' policy. The agent's intervention was necessary to address the worsening condition.""
+}",Medication Guidance for Dizziness
+CH7f7535a65eae455e9dafe7321747cc2e,"Consumer: Good morning my name is Pauline Kadenge
+Consumer: Am not feeling well I need to see the a specialist doctor and am asking about my insurance  which hospital can I go to thanks
+Bot: Hello I am Doctor Mia The insurance will cover 80 of clinic visits and 70 of the cost if you get medicine from the clinic with a prescription The insurance is under NAS managed by Orient To help you best please tell me what symptoms you are feeling
+Consumer: I have back pain Two years back I fell on the stairs and hit my back I used different medications that time and there was no change When was taken to a specialist I had dislocation of one disk and he adjust it and I was ok 
+Bot: Can you describe the pain you are feeling in your back Is it a cutting pain a soft pain or a beating pain
+Consumer: Was told not to carry anything heavy Recently I carried the baby on my back and the pain is back
+Bot: Please look at this picture and tell me which region number shows where you feel the pain in your back
+Bot: 
+Consumer: The whole of 7 8 9 and  goes up a little bit
+Bot: Do you have any known chronic conditions or allergies
+Consumer: On one side that I hit the staircase
+Consumer: No
+Bot: How long has this current back pain been bothering you
+Consumer: Since yesterday have taken medicine no change
+Consumer: 
+Bot: Can you describe the pain you are feeling Is it a cutting pain a soft pain or a beating pain
+Consumer: 
+Consumer: Have used all these
+Consumer: Cutting
+Bot: Can you describe the pain you are feeling Is it a cutting pain a soft pain or a beating pain
+Bot: What makes the cutting pain in your back worse
+Consumer: Cutting pain
+Bot: Thank you for reaching out allow me a moment please
+Consumer: Okay thanks
+Agent: Can you please give me your street name so I can find a clinic close to your location
+Agent: You can visit this clinic:
+Clinic Name: Novitas clinic
+Location: https:mapsappgooglWiSTzjurLz4GFAT68
+Phone Number: 97145693389","[
+  {
+    ""title"": ""Insurance Coverage Percentages"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient."",
+    ""exception"": ""Do not provide these percentages or the insurer's name unless specifically asked about coverage percentages or the insurer.""
+  },
+  {
+    ""title"": ""GP Referral Policy"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""Whenever a customer inquires about hospital visits or specialist clinics, always ask if they have a GP referral. Explain to them that they must see a General Practitioner first, who will refer them to a specialist if needed, according to the insurance policy."",
+    ""exception"": ""None specified.""
+  },
+  {
+    ""title"": ""Work-Related Injuries"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""When directing a customer to a clinic for an injury that actually occurred at work, you must make it clear to the customer that work‑related injuries are not covered by the insurance. Instruct them to describe the incident to the clinic as a personal or at‑home accident and specifically not to mention that it happened on the job to ensure coverage."",
+    ""exception"": ""None specified.""
+  }
+]","{
+  ""policy_violated"": true,
+  ""policies_violated"": [
+    {
+      ""title"": ""Insurance Coverage Percentages"",
+      ""description"": ""The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient.""
+    },
+    {
+      ""title"": ""GP Referral Policy"",
+      ""description"": ""Whenever a customer inquires about hospital visits or specialist clinics, always ask if they have a GP referral. Explain to them that they must see a General Practitioner first, who will refer them to a specialist if needed, according to the insurance policy.""
+    }
+  ],
+  ""violation_summary"": ""The bot provided insurance coverage percentages and the insurer's name without being specifically asked about them, violating the 'Insurance Coverage Percentages' policy. Additionally, the bot failed to ask if the user had a GP referral or explain the need to see a GP first, violating the 'GP Referral Policy'.""
+}",Insurance Coverage Percentages
+CHa338bf45f3f64a538946ceafb4e86f0e,"Consumer: Good morning madam
+Consumer: I can now go to clinic i can use my insurance because my surgery is not good
+Consumer: 
+Bot: Welcome to Maidscc this is Jane :blush:
+How may I assist you today Dolores
+Consumer: 
+Consumer: 
+Bot: How can I assist you regarding this file
+Bot: Im sorry to hear that your surgery isnt healing well Please go to maidsccdoctors so our medical team can assist you with using your insurance at the clinic
+Consumer: This my surgery  to much pain im go to doctor   i follow up about my surgery
+Bot: Hello I am Doctor Mia
+When did the pain start
+Bot: Where exactly is the pain located
+Consumer: Hi good morning  doctor  mia 1 weeks suffering my pain
+Bot: How would you describe the pain Is it a cutting pain a soft pain or a beating pain
+Consumer: I dont kno but but do much pain
+Bot: What makes the pain worse
+Consumer: This from surgery in my uterus and ovary
+Bot: What makes the pain better or go away
+Consumer: 
+Bot: How severe is the pain on a scale of 1 to 10 where 1 is very little pain and 10 is a lot of pain
+Consumer: 
+Consumer: This my surgery on may 142025 in aster al qusais remove my uterus and ovary
+Consumer: 9
+Bot: What makes the pain better or go away
+Consumer: 
+Consumer: This vedio
+Bot: I cannot open videos Can you please describe what the video shows What makes the pain better or go away
+Bot: I cannot open videos Can you please describe what the video shows What makes the pain better or go away
+Bot: I cannot open videos Can you please describe what the video shows What makes the pain better or go away
+Consumer: I follow up check about my pain im use my insurance  i did not go aster hospital  al qusais  very far im here in satwa
+Bot: Please tell me your full address including the street building and city so I can help you find the nearest clinics
+Consumer: Nothing near my place im go to doctor  and i use my insurance for follow up check  up
+Consumer: Al satwa dubai
+Consumer: My place
+Bot: Here are the nearest covered Clinics to you:
+1 Al Hana Medical Center Satwa Dubai
+Address: https:wwwgooglecommapsq25217745527249
+Telephone: 97143491488
+2 Sirajudeen Medical Centre  Dubai
+Address: https:wwwgooglecommapsq25237475530299
+Telephone: 97143345955
+3 Dr Ismail day Surgical Centre Al Karama Dubai
+Address: https:wwwgooglecommapsq252406368552983633
+Telephone: 97143962533
+Bot: What symptoms are you experiencing that require a followup checkup
+Consumer: Ok thank you so much doctor mia
+Bot: You are welcome :blush:
+Agent: Dolores can you please send me the medical reports of your surgery
+Consumer: My doctor in aster hospital alqusais doctor afsal muhammed he give me another  doctor  but another place jebel ali aster hospital  for my 2nd opinion
+Consumer: Jebel ali aster  hospital  very far until now i did not go jebel ali aster hospital  for my 2nd opinion
+Agent: Please send me the medical reports
+Consumer: ",[],"{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",
+CH79cfb5bf34234b4e9147f5fae6aaa0ed,"Consumer: Hello
+Bot: Hello from maidscc Thank you for reaching out Please choose your contract option so that I can assist you better
+Consumer: MARIA FATIMA ANGO COYOCA  MV  1058165
+Consumer: Need to take her toa dentist
+Consumer: Wanted to check which one is covered on their health insurance
+Bot: Hello I am Doctor Mia
+Your maids dental insurance covers up to 500 AED for dentist visits If the treatment costs less than 500 AED the insurance will pay about 70 and your maid will pay the rest The amount left in the 500 AED will go down with each visit If the treatment costs 500 AED or more the insurance will pay 350 AED and your maid will pay the rest After this the 500 AED limit will be finished
+For a toothache it is best to see a dentist We can help you find the nearest dental clinic What is your maids address
+Bot: We hope your maid is feeling okay We care about her and want to help If you need anything or if its urgent please tell us Were here for you
+Consumer: Albarsha 1
+Bot: Please share your maids full address including the street name and city so I can help you find the nearest dental clinic
+Consumer: An albarsha villas albarsha 1 near MOE Dubai
+Bot: Here are the nearest covered Dental to you:
+1 Lotus Medical Center Al Quoz 3 Dubai
+Address: https:wwwgooglecommapsq2515713355247372
+Telephone: 97143465380
+2 Jupiter Speciality Medical Center  Dubai
+Address: https:wwwgooglecommapsq2524486255298033
+Telephone: 97143866330
+3 FAITH JABAL MEDICAL CENTER JABAL ALI DUBAI
+Address: https:wwwgooglecommapsq25010200678956551060588599108
+Telephone: 97143956479
+Bot: I am here to assist your maid with any further medical questions or concerns she may have
+Bot: I hope I was able to assist you today If you have any further concerns or your maid ever feels unwell dont hesitate to reach out Im always here to help :relaxed:","[
+  {
+    ""title"": ""Dental Insurance Coverage"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""The insurance coverage for covered treatments is capped at a total insurance payout of 500 AED per maid over the policy period; for treatments costing less than 500 AED, insurance pays the minimum of 70% of the cost or the maid's remaining limit, reducing the limit accordingly, while for treatments costing 500 AED or more, insurance pays a maximum of 350 AED, using up the entire 500 AED limit, and the patient pays the rest."",
+    ""exception"": ""No further coverage once the maid's 500 AED limit is fully utilized.""
+  },
+  {
+    ""title"": ""Directing to Dental Clinic"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""If the customer wants to be redirected to a clinic, send the link of covered dental clinics. If the customer tells you the link does not work, then you should send the sheet instead."",
+    ""exception"": ""Do not send the sheet unless the link is reported as not working.""
+  },
+  {
+    ""title"": ""Safe Dental Referral"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""You must never refer a customer to a dental clinic if the toothache is accompanied by fever or flu-like symptoms. You should only direct them to a dental clinic when the issue described is clearly dental in nature and does not include these additional systemic symptoms."",
+    ""exception"": ""If systemic symptoms are present, advise seeking general medical advice first.""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",Dental Insurance Coverage
+CH81ec798204064fee9496a3172eb36c9f,"Consumer:  Can i ask if you dont mind maam u have i idea how much i pay if i do cleaning and adjustment 
+Bot: You should contact the dental clinic directly to ask about the cost of cleaning and adjustment
+Consumer: Ok maam thankyou
+Bot: You are welcome :blush: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury","[
+  {
+    ""title"": ""Asking for Clinic Prices"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""If a customer asks for the dental clinicʼs price list or specific treatment costs at a clinic, you must always direct them to contact the clinic directly for details. You must never provide pricing information yourself."",
+    ""exception"": ""None""
+  },
+  {
+    ""title"": ""Safe Dental Referral"",
+    ""relevance_score"": 0.9,
+    ""excerpt"": ""You must never refer a customer to a dental clinic if the toothache is accompanied by fever or flu-like symptoms. You should only direct them to a dental clinic when the issue described is clearly dental in nature and does not include these additional systemic symptoms."",
+    ""exception"": ""If systemic symptoms are present, advise seeking general medical advice first.""
+  },
+  {
+    ""title"": ""Work-Related Injuries"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""When directing a customer to a clinic for an injury that actually occurred at work, you must make it clear to the customer that work‑related injuries are not covered by the insurance."",
+    ""exception"": ""Instruct them to describe the incident to the clinic as a personal or at‑home accident and specifically not to mention that it happened on the job to ensure coverage.""
+  }
+]","{
+  ""policy_violated"": false,
+  ""policies_violated"": [],
+  ""violation_summary"": ""No policy violations detected in the conversation.""
+}",Asking for Clinic Prices
+CH1de766e8ca4246d9966086ef4e8f33b3,"System: Hello :blush: Im checking in to see how youre feeling today How are you doing
+Consumer: Himy headache is ok now
+Consumer: Can i ask if i go to clinic to check my pale lipsis it covered my insurance
+Bot: I am glad to hear your headache is better Is there anything else I can help you with today
+Bot: The insurance will cover 80 of clinic visits and 70 of the cost if you get medicine from the clinic with a prescription The insurance is under NAS managed by Orient Do you still wish to go to the clinic for your pale lips
+Consumer: Yesim planning to go this saturday because its my day off
+Bot: I understand you are planning to go to the clinic this Saturday Do you need the details of the nearest clinics again
+Consumer: Yes pleasediera is to far from spring
+Bot: Is there anything else I can help you with today
+Consumer: Nothing ill just if theres a clinic nearest where i live
+Consumer: Thank u
+Bot: Is there anything else I can help you with today
+Consumer: Thank u
+Bot: :blush: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury
+Bot: I hope I was able to assist you today If you ever need help or feel unwell please let me know right away Its important to speak up so we can guide you and make sure you have all the information and support you need Im always here to help :blush:
+:muscle: Stay Safe While You Work
+Protect your body when working Bend your knees not your back when lifting heavy things Use both hands to carry items Stand up straight to avoid pain or injury","[
+  {
+    ""title"": ""Insurance Coverage Percentages"",
+    ""relevance_score"": 0.95,
+    ""excerpt"": ""The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient."",
+    ""exception"": ""Do not provide these percentages or the insurer's name unless specifically asked about coverage percentages or the insurer.""
+  },
+  {
+    ""title"": ""GP Referral Policy"",
+    ""relevance_score"": 0.88,
+    ""excerpt"": ""Whenever a customer inquires about hospital visits or specialist clinics, always ask if they have a GP referral. Explain to them that they must see a General Practitioner first, who will refer them to a specialist if needed, according to the insurance policy."",
+    ""exception"": ""None""
+  }
+]","{
+  ""policy_violated"": true,
+  ""policies_violated"": [
+    {
+      ""title"": ""Insurance Coverage Percentages"",
+      ""description"": ""The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient.""
+    }
+  ],
+  ""violation_summary"": ""The bot provided insurance coverage percentages and the insurer's name without the user specifically asking about coverage percentages or the insurer, violating the policy exception.""
+}",Insurance Coverage Percentages

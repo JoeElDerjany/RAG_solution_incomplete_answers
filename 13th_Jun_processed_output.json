@@ -1,0 +1,214 @@
+[
+    {
+        "conversation_id": "CH4c73265d86a042508196343784794e7d",
+        "output": {
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "title": "Handling Clinic/Link Requests",
+                    "description": "If the customer asks for clinic information or other links (pharmacies, hospitals, diagnostics) before you have had a chance to fully assess the patient’s symptoms, politely acknowledge their question but explain that you need to understand the symptoms first, as they might not need a clinic visit."
+                }
+            ],
+            "violation_summary": "The bot provided clinic information before fully assessing the patient's symptoms. The bot should have first completed the symptom assessment before offering clinic details, as per the policy."
+        }
+    },
+    {
+        "conversation_id": "CH93aba577e9354b2295b62f7f80d35391",
+        "output": {
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "title": "Clinic Referral Guidelines",
+                    "description": "If a customer reports symptoms such as fever, chest pain, or persistent cough, and over-the-counter medication has not been effective, you should refer them to the nearest clinic for further evaluation."
+                }
+            ],
+            "violation_summary": "The bot initially advised against a clinic visit despite the consumer reporting persistent symptoms (fever, chest pain, and cough) that were not improving with over-the-counter medication. The bot only provided clinic information after the consumer expressed frustration and a need for help, which indicates a delay in appropriate referral."
+        }
+    },
+    {
+        "conversation_id": "CH5dffab7e3669495f92bc1d8296a4920d",
+        "output": {
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "title": "Directing to Dental Clinic",
+                    "description": "If the customer wants to be redirected to a clinic, send the link of covered dental clinics. If the customer tells you the link does not work, then you should send the sheet instead. Do not send the sheet unless the link is reported as not working."
+                }
+            ],
+            "violation_summary": "The bot provided links to dental clinics without including the insurance card number in the same message, which is required by the policy."
+        }
+    },
+    {
+        "conversation_id": "CH4887777266f74e71a4132fd6df77de2d",
+        "output": {
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "title": "Routine Check-ups Coverage",
+                    "description": "If the customer implies that they want to do a routine check-up, always inform them that routine check-ups are not covered by the insurance."
+                },
+                {
+                    "title": "Specific Eye-Related Concerns",
+                    "description": "If the maid describes eye-related concerns: If the symptoms suggest a serious condition, you must recommend that the patient visit an ophthalmologist or a clinic. If the concerns are non-serious, inform her that insurance typically does not cover these types of services."
+                }
+            ],
+            "violation_summary": "The bot failed to inform the user that routine check-ups, including eye check-ups, are not covered by insurance. Additionally, the bot did not clarify whether the eye-related concern was serious or non-serious and did not inform the user about the typical insurance coverage for non-serious vision-related problems."
+        }
+    },
+    {
+        "conversation_id": "CH4de83de02ee1436d8a3b8c9fa50d9944",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CHc6d83225ed00497787b2024ee2963330",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH380b5902a7b94e32bfaecdcb3fa8cc59",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH1dcb6dbd016947bc90a254d52966b0ff",
+        "output": {
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "title": "Handling Clinic/Link Requests",
+                    "description": "If the customer asks for clinic information or other links before you have had a chance to fully assess the patient’s symptoms, politely acknowledge their question but explain that you need to understand the symptoms first, as they might not need a clinic visit. Gently redirect the conversation back to collecting symptoms."
+                }
+            ],
+            "violation_summary": "The bot provided clinic links before fully assessing the patient's symptoms. Although the bot collected some symptoms, it did not complete the assessment before providing clinic information, which violates the policy on handling clinic/link requests."
+        }
+    },
+    {
+        "conversation_id": "CHe4ca99a57bf443ba90e2269ddc96eef2",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CHbc5db052c0bd46698830f701019762f6",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CHfcd5c16eb40b430f95cf9c3b7b999078",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH533d7e4be63044a7b4050dcb2275cb40",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH0be6865b23344710be41f6b892a01a65",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH1716300b0c014e0ba6b6b66a5b01b151",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH198a99a9018d4794a583b76e666f6781",
+        "output": {
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "title": "Medication Guidance for Dizziness",
+                    "description": "For dizziness, recommend Dizinil 50mg or Stugeron 25mg. Advise taking one tablet every 8 hours as needed. Ensure the customer is aware of the nearest pharmacies where these medications can be obtained."
+                },
+                {
+                    "title": "Symptom Management and Home Care Advice",
+                    "description": "Advise customers experiencing dizziness to rest in a quiet, dark room, drink plenty of clear liquids, eat small bland meals, avoid sudden movements, and get enough sleep. These measures should help alleviate symptoms."
+                }
+            ],
+            "violation_summary": "The bot failed to advise the customer to seek immediate medical attention despite the customer reporting worsening symptoms, which violates the exception in the 'Medication Guidance for Dizziness' policy. Additionally, the bot did not recommend seeking medical advice when symptoms persisted and worsened, violating the exception in the 'Symptom Management and Home Care Advice' policy. The agent's intervention was necessary to address the worsening condition."
+        }
+    },
+    {
+        "conversation_id": "CH7f7535a65eae455e9dafe7321747cc2e",
+        "output": {
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "title": "Insurance Coverage Percentages",
+                    "description": "The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient."
+                },
+                {
+                    "title": "GP Referral Policy",
+                    "description": "Whenever a customer inquires about hospital visits or specialist clinics, always ask if they have a GP referral. Explain to them that they must see a General Practitioner first, who will refer them to a specialist if needed, according to the insurance policy."
+                }
+            ],
+            "violation_summary": "The bot provided insurance coverage percentages and the insurer's name without being specifically asked about them, violating the 'Insurance Coverage Percentages' policy. Additionally, the bot failed to ask if the user had a GP referral or explain the need to see a GP first, violating the 'GP Referral Policy'."
+        }
+    },
+    {
+        "conversation_id": "CHa338bf45f3f64a538946ceafb4e86f0e",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH79cfb5bf34234b4e9147f5fae6aaa0ed",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH81ec798204064fee9496a3172eb36c9f",
+        "output": {
+            "policy_violated": false,
+            "policies_violated": [],
+            "violation_summary": "No policy violations detected in the conversation."
+        }
+    },
+    {
+        "conversation_id": "CH1de766e8ca4246d9966086ef4e8f33b3",
+        "output": {
+            "policy_violated": true,
+            "policies_violated": [
+                {
+                    "title": "Insurance Coverage Percentages",
+                    "description": "The insurance will cover 80% of clinic visits, and 70% of the cost if they get medicine from the clinic with a prescription. Inform them that the insurance is under NAS managed by Orient."
+                }
+            ],
+            "violation_summary": "The bot provided insurance coverage percentages and the insurer's name without the user specifically asking about coverage percentages or the insurer, violating the policy exception."
+        }
+    }
+]

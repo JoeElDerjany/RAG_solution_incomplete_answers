@@ -125,13 +125,14 @@ def generate_output_from_csv(input_csv, output_file):
     # PROMPT
     prompt = """
     You are an AI assistant tasked with analyzing conversations between a bot and users. Your goal is to evaluate whether the bot's responses in the conversation adhere to the provided company policies. If any violations are detected, you must identify the violated policies and summarize the nature of the violation.
-
+    DO NOT OVERLOOK EXCEPTIONS in the policies, they are crucial for determining if a violation has occurred.
+    YOU ONLY HAVE TO ASSESS THE BOT'S RESPONSES, NOT THE AGENT'S MESSAGES. If a bot violates a policy, you must detect the violation, even if the agent happened to correct that violation.
     For each conversation, provide the output in JSON format with the following structure:
     {
     "policy_violated": <true/false>,
     "policies_violated": [
         {
-        "policy_id": "<policy_id>",
+
         "title": "<policy_title>",
         "description": "<policy_description>"
         },
@@ -141,35 +142,31 @@ def generate_output_from_csv(input_csv, output_file):
     }
 
     ### Guidelines:
-    1. **Policy Evaluation**: Compare the bot's responses in the conversation against the provided policies. Determine if the bot's responses are incomplete, incorrect, or misleading based on the policies.
-    2. **Policy Details**: For each violated policy, include the `policy_id`, `title`, and `description` in the `policies_violated` array.
+    1. **Policy Evaluation**: Compare the bot's responses in the conversation against the provided policies. Determine if the bot's responses are incorrect, or misleading based on the policies. NOTE: some conversations have one or more agent's messages which are human input; do not compare these to policies because the task is to assess bot performance; they are only used for context and a peek to what the conversation progressed into. Add agent's intervention to the summary (to be explained) if it is relevant.
+    2. **Policy Details**: For each violated policy, include the `title` and `description` in the `policies_violated` array.
     3. **Violation Summary**: Provide a concise summary explaining how the bot's responses violated the policies.
-    4. **No Violations**: If no violations are detected, set `"policy_violated": false`, leave the `policies_violated` array empty, and make the summary  "No policy violations detected in the conversation."
+    4. **Policy Exceptions**: For every policy, carefully read and consider the `exceptions` field in the policy JSON. If a policy has exceptions, ensure that you do not mark a violation if the bot's behavior is allowed by any exception. For example, if the exception says "when speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms," and the bot does this, do NOT mark a violation for not collecting symptoms first. Always reference the exception text when making your decision.
+    5. **No Violations**: If no violations are detected, set `"policy_violated": false`, leave the `policies_violated` array empty, and make the summary  "No policy violations detected in the conversation."
+    6. **DO NOT OVERLOOK EXCEPTIONS** in the policies, they are crucial for determining if a violation has occurred.
 
     ### Example Outputs:
 
     #### Example 1: Policy Violated
     {
-    "conversation_id": "CH38242fdfc7954da38e707ef2dca9dc12",
+    "conversation_id": "CH38242fdf##########",
     "policy_violated": true,
     "policies_violated": [
         {
-        "policy_id": "policy_101",
-        "title": "Symptom Collection Priority",
-        "description": "Your absolute highest priority at the start of every conversation is to understand how the maid is feeling."
-        },
-        {
-        "policy_id": "policy_106",
         "title": "Redirecting to Medical Facilities & Providing Links",
         "description": "Provide the clinic link only when you have assessed the symptoms and determined that a clinic visit is necessary."
         }
     ],
-    "violation_summary": "The bot failed to prioritize symptom collection and provided clinic links prematurely."
+    "violation_summary": "The bot provided clinic links prematurely."
     }
 
     #### Example 2: No Policy Violations
     {
-    "conversation_id": "CHf8dbf4131b954e5cbf4112d779467156",
+    "conversation_id": "CHf8dbf4131b###########",
     "policy_violated": false,
     "policies_violated": [],
     "violation_summary": "No policy violations detected in the conversation."
@@ -177,15 +174,83 @@ def generate_output_from_csv(input_csv, output_file):
 
     ### Input Format:
     - **Messages**: The conversation between the bot and the user.
-    - **Policies**: A list of company policies in JSON format.
+    - **Policies**: A list of company policies in JSON format; the JSON includes the exceptions for each policy, please read them carefully.
 
     Analyze the conversation carefully and provide the output in the specified JSON format. Do not include any extra characters, markdown, or explanations outside the JSON object.
     """
 
     process_csv(input_csv, output_file, prompt, api_key)
 
+def create_final_policies_csv(input_csv, processed_json, final_csv_path="final_policies.csv"):
+    """
+    Create a CSV with columns:
+    conv_id, Messages, policies_related, policies_violated, policies_high_relevance
+    - policies_related: full value of the "policies" key (as JSON string) from input_csv
+    - policies_violated: full value of the "output" key (as JSON string) from processed_output.json
+    - policies_high_relevance: comma-separated policy titles from input_csv with relevance_score > 0.9
+    """
+    # Load processed output
+    with open(processed_json, 'r', encoding='utf-8') as f:
+        processed = json.load(f)
+
+    # Map conversation_id to full output JSON
+    output_map = {}
+    for item in processed:
+        conv_id = item.get("conversation_id")
+        output = item.get("output", {})
+        output_map[conv_id] = json.dumps(output, ensure_ascii=False)
+
+    # Prepare and write the final CSV
+    with open(input_csv, 'r', encoding='utf-8') as infile, \
+         open(final_csv_path, 'w', newline='', encoding='utf-8') as outfile:
+        reader = csv.DictReader(infile)
+        fieldnames = [
+            "conv_id",
+            "Messages",
+            "policies_related",
+            "policies_violated",
+            "policies_high_relevance"
+        ]
+        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        writer.writeheader()
+
+        for row in reader:
+            conv_id = row.get("Conversation Id")
+            messages = row.get("Messages", "")
+            policies_field = row.get("Policies", "")
+            # Parse policies JSON and extract full "policies" value and high relevance titles
+            try:
+                cleaned = re.sub(r'^```json', '', policies_field.strip(), flags=re.IGNORECASE).strip()
+                cleaned = re.sub(r'^```', '', cleaned).strip()
+                cleaned = re.sub(r'```$', '', cleaned).strip()
+                policies_json = json.loads(cleaned)
+                policies_list = policies_json.get("policies", [])
+                # Pretty-print policies_related
+                policies_related = json.dumps(policies_list, indent=2, ensure_ascii=False)
+                high_rel_titles = [p.get("title", "") for p in policies_list if p.get("relevance_score", 0) > 0.9]
+            except Exception:
+                policies_related = ""
+                high_rel_titles = []
+
+            # Pretty-print policies_violated
+            policies_violated_raw = output_map.get(conv_id, "")
+            try:
+                policies_violated_json = json.loads(policies_violated_raw)
+                policies_violated = json.dumps(policies_violated_json, indent=2, ensure_ascii=False)
+            except Exception:
+                policies_violated = policies_violated_raw
+
+            writer.writerow({
+                "conv_id": conv_id,
+                "Messages": messages,
+                "policies_related": policies_related,
+                "policies_violated": policies_violated,
+                "policies_high_relevance": ",".join(high_rel_titles)
+            })
+
 # Usage
 if __name__ == "__main__":
-    input_csv = 'output.csv'
-    output_file = 'processed_output.json'
+    input_csv = 'output_14th_June.csv'
+    output_file = '14th_Jun_processed_output.json'
     generate_output_from_csv(input_csv, output_file)
+    create_final_policies_csv(input_csv, output_file)
