@@ -1,6 +1,6 @@
 # Policy Compliance Pipeline
 
-This project automates the process of analyzing WhatsApp customer service conversations to identify relevant company policies, assess compliance, and flag violations. The workflow is designed to provide context-rich, policy-aware analysis for a domestic services company, leveraging advanced AI and graph database technologies.
+This project automates the process of analyzing Doctors (for now) Bot to identify relevant company policies, assess compliance, and flag violations. The workflow is designed to provide context-rich, policy-aware analysis, leveraging advanced AI and graph database technologies.
 
 ---
 
