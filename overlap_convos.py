@@ -1,0 +1,62 @@
+import pandas as pd
+import csv
+
+# Number of messages to append from above/below
+n = 5
+
+def split_messages(messages):
+    # Split by newlines, ignore empty lines
+    return [m for m in messages.split('\n') if m.strip()]
+
+def join_messages(messages):
+    return '\n'.join(messages)
+
+def process_group(df_group):
+    rows = df_group.reset_index(drop=True)
+    processed_rows = []
+
+    i = 0
+    while i < len(rows):
+        row = rows.iloc[i]
+        # Merge neighboring BOT rows
+        if row['Agent Name'] == 'BOT':
+            merged_messages = split_messages(row['Messages'])
+            j = i + 1
+            while j < len(rows) and rows.iloc[j]['Agent Name'] == 'BOT':
+                merged_messages += split_messages(rows.iloc[j]['Messages'])
+                j += 1
+            # Now, append n messages from above and below if possible
+            # Above
+            if i > 0 and rows.iloc[i-1]['Conversation Id'] == row['Conversation Id']:
+                above_msgs = split_messages(rows.iloc[i-1]['Messages'])
+                merged_messages = above_msgs[-n:] + merged_messages
+            # Below
+            if j < len(rows) and rows.iloc[j]['Conversation Id'] == row['Conversation Id']:
+                below_msgs = split_messages(rows.iloc[j]['Messages'])
+                merged_messages = merged_messages + below_msgs[:n]
+            # Create a new row with merged messages
+            new_row = row.copy()
+            new_row['Messages'] = join_messages(merged_messages)
+            processed_rows.append(new_row)
+            i = j
+        else:
+            processed_rows.append(row)
+            i += 1
+    return pd.DataFrame(processed_rows)
+
+def main():
+    df = pd.read_csv('raw_segmented_chats.csv')
+    # Group by Conversation Id and process each group
+    processed = []
+    for conv_id, group in df.groupby('Conversation Id', sort=False):
+        processed_group = process_group(group)
+        processed.append(processed_group)
+    result = pd.concat(processed, ignore_index=True)
+    result = result[result['Agent Name'] == 'BOT'] # keep only BOT convos
+    result = result[['Conversation Id', 'Last Skill', 'Agent Name', 'Messages']] # keeps only these cols
+
+    # Save to new CSV
+    result.to_csv('segmented_processed.csv', index=False, quoting=csv.QUOTE_ALL)
+
+if __name__ == "__main__":
+    main()

@@ -153,7 +153,7 @@ def createAgent():
 
         ## Input Format
         Conversation Data: Text block containing back and forth messages.
-        Message Structure: Customer/Consumer and bot messages.
+        Message Structure: Customer/Consumer and bot messages (as well as agent's which is human input to help for policy context).
         Platform: WhatsApp support conversations
         Domain: Domestic worker services (maids, drivers, nannies) and visa processing
 
@@ -164,66 +164,62 @@ def createAgent():
         Combine the outputs from both tools to ensure comprehensive policy coverage.
 
         ## Step 2: Relevance Assessment
-        For each policy retrieved, calculate a `relevance_score` between 0.0 (not relevant) and 1.0 (perfectly relevant) based on the following criteria. A score of 1.0 indicates a policy that directly and completely addresses the core issue of the conversation.
+        For each policy retrieved, calculate a `relevance_score` between 0.0 (not relevant) and 1.0 (perfectly relevant) based on the following criteria. A score of 1.0 indicates a policy that directly and completely addresses the core issue of the conversation:
         - **Service Type Alignment:** How well the policy covers the services mentioned (maid, driver, visa, etc.).
         - **Customer Intent Matching:** Whether the policy addresses the customer's specific inquiry, complaint, or issue.
         - **Keyword Overlap:** Presence of relevant terms (sickness, pain, hospitals, symptoms, doctor, visa processing, service fees, salaries, etc.).
         - **Bot Response Appropriateness:** How well the policy supports or validates the customer service responses provided.
         - **Communication Style:** Policy alignment with professional WhatsApp standards, including the use of emojis (indicated by `::` like `:happy:`), jargon, or informal language.
         - **Process Relevance:** How well the policy covers relevant processes mentioned in the conversation.
-        - **Regulatory Compliance:** Adherence to UAE labor laws, visa requirements, or other regulations.
+        - **Exclusion Criterion**: If the policy is primarily about the procedures for filing complaints or making a chat transfer, assign a relevance score of 0.00.
 
         ## Step 3: Policy Selection & Filtering
-        - Select **only** policies with a `relevance_score` of **0.85 or higher**.
         - After filtering, sort the selected policies in descending order based on their `relevance_score`.
         - Prioritize policies that directly address customer concerns, complaints, and intents when assigning scores.
         - Include policies that guide appropriate bot behavior and service standards.
-        - Consider policies related to service guarantees, refunds, or problem resolution.
+        - With every selected policy, you have to keep in mind its mentioned edge cases or exceptions (to be clarified in below examples).
 
         ## Step 4: Content Extraction
         For each selected policy that meets the threshold:
-        - **Policy ID:** Extract the unique identifier from the database.
         - **Title:** Use the policy's official title.
-        - **Relevance Score:** The calculated score (float between 0.85 and 1.0).
+        - **Relevance Score:** The calculated score (float between 0.00 and 1.0).
         - **Excerpt:** Extract the most relevant portion explaining the core policy rule or guideline.
-
+        - **Exceptions:** If the policy has exceptions or special cases, include them in the output.
+        
         # Output Requirements and schema
         ## JSON Format (Strict)
         Provide your final output in a clean JSON object.
-        Example Output:
-
+        Example Output; only for demonstration, use it as a template not as a literal example:
         {
-        "policies": [
-        {Add commentMore actions
-        "policy_id": "policy_101",
-        "title": "Service Replacement Policy",
-        "relevance_score": 0.95,
-        "excerpt": "If a domestic worker fails to meet service standards within the first 30 days, customers are entitled to a free 
-        replacement at no additional cost."
-        },
-        {
-        "policy_id": "policy_305",
-        "title": "Symptom Collection Priority",
-        "relevance_score": 0.88,
-        "excerpt": "Understanding the maid's symptoms is the best way to help determine the right course of action. Collect information 
-        about the patient's symptoms before providing clinic information."
-        }
-        ]
+            "policies": [
+                {
+                    "title": "Safe Dental Referral",
+                    "relevance_score": 0.88,
+                    "excerpt": "You must never refer a customer to a dental clinic if the toothache is accompanied by fever or flu-like symptoms. You should only direct them to a dental clinic when the issue described is clearly dental in nature and does not include these additional systemic symptoms.",
+                    "exception": "If a customer simply asks for a toothache referral, do not ask about other symptoms; only refrain from referring if they mention flu-like signs."
+                },
+                {
+                    "title": "Symptom Collection Priority",
+                    "relevance_score": 0.88,
+                    "excerpt": "Your absolute highest priority at the start of every conversation is to understand how the maid is feeling. Regardless of how the customer starts the conversation (e.g., asking about clinics, insurance, etc.), you must first attempt to collect information about the patientʼs symptoms.",
+                    "exceptions": "Do not collect symptoms in case of dental concerns. When speaking to a client about a sick maid, ask them to speak to the maid directly before collecting symptoms."
+                }
+            ]
         }
             
 
         ## Quality Standards
-        - **Clean JSON only:** Do not include Markdown fences (like ```
+        - **Clean JSON only:** Do not include Markdown fences (like ```).
         - **Precise excerpts:** Focus on actionable policy content that directly addresses customer concerns.
         - **Accurate scoring:** Ensure the score accurately reflects the true relevance between the conversation context and the policy.
         - **Consistent formatting:** Maintain the exact JSON structure for downstream processing.
 
-        ## Edge CasesAdd commentMore actions
+        ## Edge Cases
         - **No policies meet threshold:** If no policies have a score of 0.87 or higher, return `{"policies": []}`.
         - **Mixed service inquiries:** Include all policies that meet the threshold for any relevant service types mentioned.
-        - **Complaint escalations:** Prioritize policies related to issue resolution and customer satisfaction when calculating scores.
-
-        ## Available ToolsAdd commentMore actions
+        - **Sparse Conversations**: If a chat consists of only bot messages, return  `{"policies": []}`, same with chats containing only two messages or less. 
+        
+        ## Available Tools
         - `Structured_GraphRAG`: Retrieves policies through entity-relationship traversal in the Neo4j graph.
         - `Unstructured_GraphRAG`: Retrieves policies through vector similarity search.
 
