@@ -44,16 +44,30 @@ def process_group(df_group):
             i += 1
     return pd.DataFrame(processed_rows)
 
+def fix_garbled_text(text):
+    """
+    Fix garbled text by re-encoding and decoding using utf-8.
+    """
+    try:
+        return text.encode('latin-1').decode('utf-8')
+    except Exception:
+        return text
+
 def main():
-    df = pd.read_csv('raw_segmented_chats.csv')
-    # Group by Conversation Id and process each group
+    df = pd.read_csv('segmented conversations 14th june - Sheet1.csv', encoding='utf-8')
     processed = []
     for conv_id, group in df.groupby('Conversation Id', sort=False):
+        # Skip groups where all Agent Name == 'BOT'
+        if (group['Agent Name'] == 'BOT').all():
+            continue
         processed_group = process_group(group)
         processed.append(processed_group)
     result = pd.concat(processed, ignore_index=True)
     result = result[result['Agent Name'] == 'BOT'] # keep only BOT convos
     result = result[['Conversation Id', 'Last Skill', 'Agent Name', 'Messages']] # keeps only these cols
+
+    # Fix garbled text in Messages column
+    result['Messages'] = result['Messages'].apply(fix_garbled_text)
 
     # Save to new CSV
     result.to_csv('segmented_processed.csv', index=False, quoting=csv.QUOTE_ALL)
